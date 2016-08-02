@@ -1,0 +1,40 @@
+<form id="chatform">
+    <table id="chat">
+        <tbody>
+            <!-- <tr ng-repeat="message in currentRoom.messages" ng-switch on="message.type">
+                <td>{{ getFormattedTime(message.timestamp) }}</td>
+                <td>{{ message.handle.first_name }} {{ message.handle.last_name }}</td>
+                <td ng-switch-when="file">
+                    <a href="{{message.message}}" target="_blank">{{getFileName(message.message)}}</a>
+                </td>
+                <td ng-switch-when="text">
+                    {{ message.message }}
+                </td>
+            </tr> -->
+            <li class="wrapper" ng-repeat="message in currentRoom.messages" ng-switch on="message.type">
+                <div class="conv-wrapper gray-bg">
+                    <img class="user-avatar" />
+                    <div class="chat-content">
+                        <h3 class="user-name">{{ message.handle.first_name }} {{ message.handle.last_name }}</h3>
+                        <p ng-switch-when="file" class="chat-data">
+                            <a href="{{message.message}}" target="_blank">{{getFileName(message.message)}}</a>
+                        </p>
+                        <p ng-switch-when="text" class="chat-data">
+                            {{ message.message }}
+                        </p>
+                        <p class="chat-time">{{ getFormattedTime(message.timestamp) }}</p>
+                    </div>
+                </div>
+            </li>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Say something:</td>
+                <td>
+                    <input id="message" type="text" placeholder="message">
+                    <input id="file" type="file" onchange="angular.element(this).scope().checkFile()">
+                    <button type="submit" id="go" ng-click="send()">Say it</button>
+                </td>
+        </tfoot>
+    </table>
+</form>

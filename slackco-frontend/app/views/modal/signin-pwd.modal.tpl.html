@@ -1,0 +1,19 @@
+<div class="modal-header">
+	<span class="close-icon large-gray pull-right cursor-pointer" ng-click="cancel()" title="Close"></span>
+	<a ng-click="back()">Sign in with a different email address</a>
+</div>
+<div class="modal-body">
+	<form>
+		<h3>Sign in with a different email address</h3>
+		<p>Please checkout your email for a link<br/>to sign in to your company account</p>
+		<button class="btn btn-success btn-lg btn-block" ng-click="signinWithDiff()">SIGN IN</button>
+	</form>
+	<div class="divider"></div>
+	<form class="signup-modal-form" name="signInForm">
+		<h3>Or enter your password<a class="pull-right" ng-click="forgotPwd()">Forgot password?</a></h3>
+		<div class="form-group">			
+			<input type="password" class="form-control" placeholder="Password" ng-model="pwd" required minlength="8" />
+		</div>
+		<button class="btn btn-info btn-lg btn-block" ng-click="signin()">SIGN IN</button>		
+	</form>	
+</div>

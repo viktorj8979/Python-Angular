@@ -1,0 +1,70 @@
+.edit-icon {
+	background: url("../images/edit-icon-black.png") no-repeat scroll 0 0 transparent;
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	cursor: pointer;
+	vertical-align: middle;
+
+	&.white {
+		background-image: url("../images/edit-icon-white.png");
+	}
+}
+
+.close-icon {
+	display: inline-block;		
+
+	&.bold-gray {
+		background-image: url("../images/close-icon-bold-gray.png");
+		width: 14px;
+		height: 14px;
+	}
+
+	&.bold-white {
+		background-image: url("../images/close-icon-bold-white.png");
+		width: 14px;
+		height: 14px;	
+	}
+
+	&.large-gray {
+		background-image: url("../images/close-icon-large-gray.png");
+		width: 20px;
+		height: 18px;
+	}
+
+	&.large-white {
+		background-image: url("../images/close-icon-large-white.png");
+		width: 20px;
+		height: 18px;
+	}
+
+	&.thin-gray {
+		background-image: url("../images/close-icon-thin-gray.png");
+		width: 14px;
+		height: 12px;
+	}
+
+	&.thin-white {
+		background-image: url("../images/close-icon-thin-white.png");
+		width: 14px;
+		height: 12px;
+	}
+}
+
+.check {
+	width: 20px;
+	height: 14px;
+	display: inline-block;
+	background: url("../images/check-icon.png") no-repeat scroll 0 0 transparent;
+
+	&.white-icon {
+		background-image: url("../images/check-icon-white.png") !important;
+	}
+}
+
+.edit-cover-icon {
+	width: 27px;
+	height: 21px;
+	background-image: url("../images/photo-icon-gray.png");
+	display: inline-block;
+}

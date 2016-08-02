@@ -1,0 +1,14 @@
+<div class="modal-header">
+	<span class="close-icon large-gray pull-right cursor-pointer" ng-click="cancel()" title="Close"></span>
+	<a ng-click="back()">To the previous screen</a>
+</div>
+<div class="modal-body">
+	<form name="resetPwdForm">
+		<h3>Reset password</h3>
+		<div class="form-group">
+			<label>Please enter your email address</label>
+			<input type="email" class="form-control" placeholder="youremail@example.com" ng-model="email" required />
+		</div>
+		<button class="btn btn-success btn-lg btn-block" ng-click="resetPwd()">RESET PASSWORD</button>
+	</form>	
+</div>

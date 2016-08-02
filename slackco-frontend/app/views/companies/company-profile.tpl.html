@@ -1,0 +1,169 @@
+<div class="company-profile-page">
+	<section class="top-container" back-img="{{companyProfile.cover}}">		
+		<div class="container">
+			<img ng-src="{{companyProfile.logo || 'assets/images/no-avatar.png'}}" class="company-logo">
+			<h1 class="company-name">{{companyProfile.name}}</h1>
+			<ul class="social-list">
+				<li ng-show="companyProfile.facebook && companyProfile.facebook!=''">
+					<a ng-href="companyProfile.facebook"><i class="fa fa-facebook"></i></a>
+				</li>
+				<li ng-show="companyProfile.twitter && companyProfile.twitter!=''">
+					<a ng-href="companyProfile.twitter"><i class="fa fa-twitter"></i></a>
+				</li>
+				<li ng-show="companyProfile.instagram && companyProfile.instagram!=''">
+					<a ng-href="companyProfile.instagram"><i class="fa fa-instagram"></i></a>
+				</li>			
+				<li ng-show="companyProfile.google_plus && companyProfile.google_plus!=''">
+					<a ng-href="companyProfile.google_plus"><i class="fa fa-google-plus"></i></a>
+				</li>
+				<li ng-show="companyProfile.linkedin && companyProfile.linkedin!=''">
+					<a ng-href="companyProfile.linkedin"><i class="fa fa-linkedin"></i></a>
+				</li>
+				<li ng-show="companyProfile.youtube && companyProfile.youtube!=''">
+					<a ng-href="companyProfile.youtube"><i class="fa fa-youtube-play"></i></a>
+				</li>
+				<li ng-show="companyProfile.github && companyProfile.github!=''">
+					<a ng-href="companyProfile.github"><i class="fa fa-github-alt"></i></a>
+				</li>
+				<li ng-show="companyProfile.stackoverflow && companyProfile.stackoverflow!=''">
+					<a ng-href="companyProfile.stackoverflow"><i class="fa fa-stack-overflow"></i></a>
+				</li>
+			</ul>
+			<div class="butotn-area">
+				<button class="btn btn-info" ng-click="sendFriendRequest()">Send a Friend Request</button>
+				<button class="btn btn-success" ng-click="createConv()">Create Conversation</button>
+			</div>
+		</div>
+	</section>
+	<section class="main-container">
+		<div class="container">
+			<h5 class="page-title">BASIC INFORMATION</h5>
+			<div class="row">
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+					<div class="basic-info">
+						<h3>Website</h3>
+						<a ng-href="companyProfile.website">{{companyProfile.website}}</a>
+					</div>
+					<div class="basic-info">
+						<h3>Headquarters</h3>
+						<p>{{companyProfile.city}}, {{companyProfile.state}} {{companyProfile.country}}</p>
+					</div>
+				</div>				
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+					<div class="basic-info">
+						<h3>Industry</h3>
+						<p>{{companyProfile.industry}}</p>
+					</div>
+					<div class="basic-info">
+						<h3>Company Size</h3>
+						<p>{{companyProfile.company_size}}</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+					<div class="basic-info">
+						<h3>Type</h3>
+						<p>{{companyProfile.company_type}}</p>
+					</div>
+					<div class="basic-info">
+						<h3>Founded</h3>
+						<p>{{companyProfile.founded}}</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+					<div class="basic-info">
+						<h3>Owner</h3>
+						<div class="user-info">
+							<img class="user-avatar" alt="{{companyProfile.owner.username}}" ng-src="{{companyProfile.owner.avatar || 'assets/images/no-avatar.png'}}">
+							<div class="user-data">
+								<h3 class="user-name" ng-show="companyProfile.owner.first_name != ''">{{companyProfile.owner.first_name}} {{companyProfile.owner.last_name}}</h3>
+								<h3 class="user-name" ng-show="companyProfile.owner.first_name == ''">{{companyProfile.owner.email}}</h3>
+								<span class="user-level">{{companyProfile.owner.role}}</span>
+							</div>
+						</div>
+					</div>					
+				</div>
+			</div>
+			<div class="row basic-info-wrapper">
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+					<div class="info">
+						<div class="info-title">
+							<h5>COMPANY DESCRIPTION</h5>
+						</div>
+						<div class="divider"></div>
+						<div class="info-body" ng-nicescroll nice-option="{zindex: 999, autohidemode: true, cursorcolor: '#d4d4d4', cursorwidth: '7px', cursorborder: 'none', cursorborderradius: '7px'}" ng-class="{'has-data': companyProfile.description}">
+							<p class="comment">Click and start to typing your<br/>company’s description…</p>
+							<div class="company-desc">
+								<p>{{companyProfile.description}}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+					<div class="info">
+						<div class="info-title">
+							<h5>{{companyProfile.name}} FRIENDS</h5>
+						</div>
+						<div class="divider"></div>
+						<div class="info-body" ng-nicescroll nice-option="{zindex: 999, autohidemode: true, cursorcolor: '#d4d4d4', cursorwidth: '7px', cursorborder: 'none', cursorborderradius: '7px'}" ng-class="{'has-data': companyFriends.length!=0}">
+							<p class="comment">Discover the company and<br/>add them as friends.</p>
+							<ul class="friend-list">
+								<li class="company-info clearfix" ng-repeat="company in companyFriends track by $index" ng-if="company.id!=companyProfile.id">
+									<a href="/#/company-profile/{{company.id}}">
+										<img ng-src="{{company.logo || 'assets/images/no-avatar.png'}}" class="company-logo" />
+										<div class="company-data">
+											<h3 class="company-name">{{company.target_company.name}}</h3>
+											<span class="company-role">{{company.target_company.industry}}</span>
+										</div>
+									</a>
+								</li>								
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+					<div class="info">
+						<div class="info-title">
+							<h5>PEOPLE WHO WORK IN {{companyProfile.name}}</h5>
+						</div>
+						<div class="divider"></div>
+						<div class="info-body" ng-class="{'has-data': companyMembers.length!=0}" ng-nicescroll nice-option="{zindex: 999, autohidemode: true, cursorcolor: '#d4d4d4', cursorwidth: '7px', cursorborder: 'none', cursorborderradius: '7px'}">
+							<p class="comment">Invite people who work in the<br/>{{companyProfile.name}} and to create<br/>an effective team</p>
+							<ul class="fb-user-list">
+								<li class="user-info clearfix" ng-repeat="member in companyMembers track by $index">
+									<img ng-src="{{member.logo || 'assets/images/no-avatar.png'}}" class="user-avatar">
+									<div class="user-data">
+										<h3 class="user-name" ng-show="member.first_name!=null && member.first_name!=''">{{member.first_name}} {{member.last_name}}</h3>
+										<h3 class="user-name" ng-hide="member.first_name!=null && member.first_name!=''">{{member.email}}</h3>
+										<span class="user-level">{{member.role}}</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+					<div class="info">
+						<div class="info-title">
+							<h5>{{companyProfile.name}} HAS AFFILIATED COMPANIES</h5>
+						</div>
+						<div class="divider"></div>
+						<div class="info-body" ng-class="{'has-data': companyProfile.affiliated_companies.length!=0}" ng-nicescroll nice-option="{zindex: 999, autohidemode: true, cursorcolor: '#d4d4d4', cursorwidth: '7px', cursorborder: 'none', cursorborderradius: '7px'}">
+							<p class="comment">There are no affiliated companies.<br/>You can add them in your<br/>profile settings.</p>
+							<ul class="affli-company-list" ng-repeat="company in affiCompanies track by $index">
+								<li class="company-info clearfix">
+									<a ng-href="/#/company-profile/{{company.id}}">
+										<img ng-src="{{company.logo || 'assets/images/no-avatar.png'}}" class="company-logo" />
+										<div class="company-data">
+											<h3 class="company-name">{{company.name}}</h3>
+											<span class="company-role">{{company.industry}}</span>
+										</div>
+									</a>
+								</li>								
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>			
+		</div>
+	</section>
+</div>

@@ -1,0 +1,292 @@
+.intro {
+    display: table;
+    width: 100%;
+    height: auto;
+    padding: 100px 0;
+    text-align: center;
+    color: $color__white;
+    background: url(../../assets/images/landing-top-bg.jpg) no-repeat bottom center scroll;
+    @include background-size(cover);
+
+    @media (min-width: 768px) {
+    	height: 100%;
+	    padding: 244px 0 142px;
+    }
+
+    .intro-body {
+	    display: table-cell;
+	    vertical-align: middle;
+
+	    .brand-heading {
+		    font-family: "OpenSans-Light";
+			color: $color__white;	
+			margin-bottom: 60px;
+			font-size: 40px;
+
+			@media (min-width: 768px) {
+		    	font-size: 54px;
+		    }
+		}
+
+		.get-started {
+		    @include border-radius(3px);
+			box-shadow: 0 3px 30px 0 rgba(25, 25, 25, 0.5);
+			font-family: "OpenSans-Bold";
+			font-size: 18px;
+		}
+	}
+
+	&.bottom {
+		background-color: $color__dark_gray;
+		background-image: none;	
+
+		@media (min-width: 768px) {
+	    	padding: 80px 0;
+	    }
+	}
+} 
+
+.landing-page {
+	section {
+		padding: 80px 0;
+
+		h2 {
+			font-family: "OpenSans-Light";	
+			text-align: center;
+		}
+	}
+
+	.steps-container {
+		h2 {
+			margin-bottom: 80px;
+		}
+
+		h4 {
+			margin-bottom: 20px;
+			font-family: "OpenSans";
+			line-height: 1.3;
+		}
+	}
+
+	.company-container {
+		h2 {
+			margin-bottom: 80px;
+		}
+
+		h3 {
+			line-height: 1.3;
+		}
+
+		.company-seo {
+			margin-top: 50px;
+			text-align: center;
+
+			.user-name {
+				margin-top: 10px;
+			}
+
+			.user-level {
+				margin-top: 3px;
+			}
+		}
+	}
+
+	.team-container {
+		h2 {
+			margin-bottom: 84px;
+		}
+	}
+
+	.team-member {
+	  	@include border-radius(3px);
+	  	background-color: $color__white;
+	  	padding: 20px;
+	  	margin-bottom: 30px;
+	  	position: relative;
+
+	  	.twitter-link {	
+			position: absolute;
+			display: block;
+			top: 20px;
+			right: 20px;
+
+			i {
+				color: $color__blue;
+				font-size: 20px;
+			}
+		}
+
+		.user-info {
+			margin-bottom: 20px;
+			float: left;
+		}
+	}
+}
+
+.home-page {
+	.top-container {
+		background-color: $color__dark_gray;
+		padding: 110px 0 50px;
+		position: relative;
+	}
+
+	.main-container {
+		padding-top: 37px;
+		padding-bottom: 50px;
+	}
+}
+
+.basic-info {
+	margin-top: 30px;
+	width: 100%;
+
+	h3 {
+		font-family: "OpenSans-Light";
+		color: $color__gray;
+		line-height: 1.4;
+	}
+
+	a {
+		font-family: "OpenSans-Light";
+		font-size: 18px;
+		min-height: 25px;
+		display: block;
+	}
+
+	p {
+		font-family: "OpenSans-Light";
+		font-size: 18px;
+		color: $color__black;	
+		min-height: 25px;
+	}
+
+	.user-info {
+		width: 100%;
+		margin-top: 10px;
+	}
+
+	.user-avatar {	
+		width: 68px;
+		height: 68px;
+	}
+
+	.user-name {
+		margin-bottom: 2px;
+		line-height: 1;
+	    font-family: "OpenSans-Light";
+	    font-size: 18px;
+	    color: $color__black;
+	}
+
+	.user-level {
+		font-family: "OpenSans";
+	  	font-size: 12px;
+	  	color: $color__gray;
+	}
+}
+
+.basic-info-wrapper {
+	margin-top: 74px;
+
+	.info {
+		background-color: $color__graybg;
+		@include border-radius(3px);
+		margin-bottom: 30px;
+
+		.info-title {
+			padding: 30px;
+
+			h5 {
+				font-family: "OpenSans";
+				font-size: 16px;
+				color: $color__gray;
+				line-height: 1.1;
+			    text-transform: uppercase;
+			}	
+		}
+
+		.info-body {
+			padding: 25px 30px;
+		    height: 415px;
+		    width: 100%;
+		    display: table;
+		    vertical-align: middle;
+
+		    .comment {
+				text-align: center;
+			  	display: table-cell;
+			  	vertical-align: middle;
+			  	font-family: "OpenSans-Light";
+			  	font-size: 30px;
+			  	color: $color__gray;
+			}
+
+		    &.has-data {
+				display: block;
+
+				.comment {
+					display: none !important;
+				}
+			}
+		}
+	}
+}
+
+.friend-list {
+	width: 100%;
+
+	li {
+		width: 50%;
+		margin-bottom: 20px;
+		display: inline-block;
+		float: left;
+	}
+}
+
+.fb-user-list {
+	li {
+		width: 50%;
+		margin-bottom: 20px;
+		display: inline-block;
+		float: left;
+
+		.user-avatar {
+			width: 68px;
+			height: 68px;
+		}
+
+		.user-data {
+			width: calc(100% - 88px);
+    		word-wrap: break-word;
+		}
+
+		.user-name {
+			font-family: "OpenSans-Light";
+		}
+	}
+}
+
+.affli-company-list {
+	li {
+		width: 50%;
+		margin-bottom: 20px;
+		display: inline-block;
+		float: left;
+
+		.company-logo {
+			width: 90px;
+			height: 90px;
+		}
+
+		.company-name {
+			font-family: "OpenSans-Light";
+			font-size: 22px;
+		}
+
+		.company-role {
+			font-family: "OpenSans";
+			font-size: 14px;
+			display: block;
+		}
+	}
+}

@@ -1,0 +1,40 @@
+<div class="modal-header">
+	<span class="close-icon large-white pull-right cursor-pointer" ng-click="cancel()" title="Close"></span>
+	<h4 class="modal-title">FramerJS Friends (40)</h4>
+</div>
+<div class="modal-body">
+	<form class="edit-friends-form">
+		<div class="dropdown-wrapper">
+			<div class="dropdown-custom white searchByIndustry" ng-class="{'open': isSearchDropdownOpened}">
+				<div class="title" ng-click="toggleSearchDropdown()">Search by industry</div>
+				<div class="content">
+					<div class="industry-list" ng-nicescroll nice-option="{zindex: 999, autohidemode: true, cursorcolor: '#595959', cursorwidth: '7px', cursorborder: 'none', cursorborderradius: '7px'}">
+						<div class="item" ng-click="selectAllItem()" ng-class="{'filtered': allFiltered}">All</div>
+						<div class="item" ng-repeat="industry in industryList track by $index" ng-click="selectItem(industry)" ng-class="{'filtered': industry.filtered || allFiltered}">{{industry.name}}</div>
+					</div>
+					<div class="button-area clearfix">
+						<a ng-click="selectAllItem()">Reset Filter</a>
+						<a ng-click="applyFilter()">Apply Filter</a>
+					</div>
+				</div>							
+			</div>
+		</div>
+		<div class="friend-list-wrapper" ng-nicescroll nice-option="{zindex: 999, autohidemode: true, cursorcolor: '#595959', cursorwidth: '7px', cursorborder: 'none', cursorborderradius: '7px'}">
+			<ul class="friend-list">
+				<li ng-repeat="friend in companyFriends track by $index">
+					<div class="company-info">
+						<img src="" class="company-logo">
+						<div class="company-data">
+							<h3 class="company-name">{{friend.target_company.name}}</h3>
+							<span class="company-role">{{friend.target_company.industry}}</span>
+						</div>
+					</div>
+					<div class="pull-right actions">
+						<a href="/#/conversation/{{friend.target_company.id}}" class="btn btn-success btn-sm go-to-conv">Go to conversation</a>
+						<a type="button" class="close-icon thin-white" title="Close" ng-click="deleteFriend(friend.target_company.id)"></a>
+					</div>
+				</li>				
+			</ul>
+		</div>
+	</form>
+</div>

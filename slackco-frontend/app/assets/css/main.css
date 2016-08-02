@@ -1,0 +1,2207 @@
+@font-face {
+  font-family: 'OpenSans';
+  font-weight: normal;
+  src: url("../fonts/OpenSans-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'OpenSans-Bold';
+  font-weight: bold;
+  src: url("../fonts/OpenSans-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'OpenSans-BoldItalic';
+  font-weight: bold;
+  font-style: italic;
+  src: url("../fonts/OpenSans-BoldItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'OpenSans-Italic';
+  font-style: italic;
+  src: url("../fonts/OpenSans-Italic.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'OpenSans-Light';
+  src: url("../fonts/OpenSans-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'OpenSans-Semibold';
+  src: url("../fonts/OpenSans-Semibold.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'OpenSans-SemiboldItalic';
+  src: url("../fonts/OpenSans-SemiboldItalic.ttf") format("truetype");
+}
+/* line 1, ../styles/scss/_common.scss */
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: #e7e7e7;
+  display: block;
+}
+
+/* line 8, ../styles/scss/_common.scss */
+.page-title {
+  color: #989898;
+  font-family: "OpenSans";
+}
+
+/* line 13, ../styles/scss/_common.scss */
+.top-container {
+  width: 100%;
+  text-align: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+/* line 18, ../styles/scss/_common.scss */
+.top-container .company-logo {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+  background: -webkit-linear-gradient(left, #79eeb5, #85c8ff);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(left, #79eeb5, #85c8ff);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(left, #79eeb5, #85c8ff);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to left, #79eeb5, #85c8ff);
+  position: relative;
+}
+/* line 29, ../styles/scss/_common.scss */
+.top-container .company-logo img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+}
+/* line 35, ../styles/scss/_common.scss */
+.top-container .company-logo > .edit-icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -8px;
+  margin-top: -8px;
+}
+/* line 44, ../styles/scss/_common.scss */
+.top-container .company-name {
+  color: #ffffff;
+  font-size: 40px;
+  line-height: 1.4;
+}
+/* line 50, ../styles/scss/_common.scss */
+.top-container .social-list {
+  margin-bottom: 50px;
+}
+/* line 53, ../styles/scss/_common.scss */
+.top-container .social-list li {
+  display: inline-block;
+  margin-right: 10px;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  vertical-align: middle;
+}
+/* line 62, ../styles/scss/_common.scss */
+.top-container .social-list li.no-bg {
+  background: transparent;
+  margin-right: 0;
+}
+/* line 67, ../styles/scss/_common.scss */
+.top-container .social-list li.add-socials {
+  background: transparent;
+  width: auto;
+  line-height: 50px;
+  color: #ffffff;
+  font-family: "OpenSans";
+  font-size: 20px;
+}
+/* line 76, ../styles/scss/_common.scss */
+.top-container .social-list li > a {
+  line-height: 50px;
+  color: #ffffff;
+  opacity: 0.5;
+  font-size: 22px;
+}
+/* line 82, ../styles/scss/_common.scss */
+.top-container .social-list li > a.edit-icon {
+  opacity: 1;
+  margin-top: 16px;
+}
+/* line 90, ../styles/scss/_common.scss */
+.top-container .btn {
+  margin: 0 15px;
+}
+/* line 94, ../styles/scss/_common.scss */
+.top-container .edit-cover {
+  text-align: left;
+  display: block;
+  font-family: "OpenSans";
+  font-size: 16px;
+  color: #ffffff;
+  opacity: 0.7;
+  cursor: pointer;
+  margin-top: -25px;
+}
+/* line 104, ../styles/scss/_common.scss */
+.top-container .edit-cover .edit-cover-icon {
+  margin-right: 5px;
+}
+/* line 108, ../styles/scss/_common.scss */
+.top-container .edit-cover .edit-cover-text {
+  line-height: 22px;
+  vertical-align: top;
+}
+
+/* line 115, ../styles/scss/_common.scss */
+.company-logo {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+}
+
+/* line 121, ../styles/scss/_common.scss */
+.company-name {
+  font-family: "OpenSans";
+  font-size: 18px;
+  color: #000000;
+}
+
+/* line 127, ../styles/scss/_common.scss */
+.company-role, .company-desc {
+  font-family: "OpenSans";
+  font-size: 12px;
+  color: #989898;
+}
+
+/* line 134, ../styles/scss/_common.scss */
+.company-info .company-logo {
+  margin-right: 15px;
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 140, ../styles/scss/_common.scss */
+.company-info .company-data {
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 145, ../styles/scss/_common.scss */
+.company-info .company-name {
+  margin-bottom: 2px;
+}
+
+/* line 150, ../styles/scss/_common.scss */
+.user-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  display: inline-block;
+}
+
+/* line 157, ../styles/scss/_common.scss */
+.user-name {
+  font-family: OpenSans;
+  font-size: 18px;
+  color: #000000;
+}
+
+/* line 163, ../styles/scss/_common.scss */
+.user-level {
+  font-family: OpenSans;
+  font-size: 12px;
+  color: #989898;
+}
+
+/* line 169, ../styles/scss/_common.scss */
+.user-info {
+  width: 100%;
+}
+/* line 172, ../styles/scss/_common.scss */
+.user-info .user-avatar {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 15px;
+}
+/* line 178, ../styles/scss/_common.scss */
+.user-info .user-data {
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 183, ../styles/scss/_common.scss */
+.user-info .user-name {
+  margin-bottom: 2px;
+  line-height: 1;
+}
+
+/* line 189, ../styles/scss/_common.scss */
+.is-border {
+  border: 1px solid #d8d8d8 !important;
+}
+
+/* line 193, ../styles/scss/_common.scss */
+.dropdown-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* line 198, ../styles/scss/_common.scss */
+.dropdown-custom {
+  width: 100%;
+  cursor: pointer;
+}
+/* line 202, ../styles/scss/_common.scss */
+.dropdown-custom:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  display: block;
+  width: 16px;
+  height: 9px;
+  margin-top: -4px;
+  background: url("../images/dropdown-icon-gray.png") no-repeat scroll 0 0 transparent;
+  opacity: 0.5;
+}
+/* line 216, ../styles/scss/_common.scss */
+.dropdown-custom.white:after {
+  background: url("../images/dropdown-icon-white.png") no-repeat scroll 0 0 transparent;
+  opacity: 1;
+}
+/* line 221, ../styles/scss/_common.scss */
+.dropdown-custom.white .title {
+  color: #ffffff;
+}
+/* line 226, ../styles/scss/_common.scss */
+.dropdown-custom .title {
+  font-family: "OpenSans-Light";
+  font-size: 20px;
+  color: #989898;
+  padding: 5.5px 0;
+  border-bottom: solid 1px #d8d8d8;
+  line-height: 1;
+}
+/* line 234, ../styles/scss/_common.scss */
+.dropdown-custom .title.has-data {
+  color: #000000;
+}
+/* line 239, ../styles/scss/_common.scss */
+.dropdown-custom .content {
+  width: 100%;
+  height: 380px;
+  margin-bottom: 14px;
+  overflow-y: auto;
+  outline: none;
+  display: none;
+  background-color: #202020;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  padding: 10px 0;
+}
+/* line 251, ../styles/scss/_common.scss */
+.dropdown-custom.open .content {
+  display: block;
+  z-index: 99;
+  position: absolute;
+}
+/* line 257, ../styles/scss/_common.scss */
+.dropdown-custom .item {
+  font-family: "OpenSans-Light";
+  font-size: 16px;
+  color: #ffffff;
+  padding: 10px 20px;
+}
+/* line 263, ../styles/scss/_common.scss */
+.dropdown-custom .item:hover {
+  background-color: #313131;
+}
+
+/* line 269, ../styles/scss/_common.scss */
+.margin-left-15 {
+  margin-left: 15px;
+}
+
+/* line 273, ../styles/scss/_common.scss */
+.margin-left-30 {
+  margin-left: 30px;
+}
+
+/* line 277, ../styles/scss/_common.scss */
+.gray-bg {
+  background-color: #f9f9f9;
+}
+
+/* line 281, ../styles/scss/_common.scss */
+.white-bg {
+  background-color: #ffffff;
+}
+
+/* line 285, ../styles/scss/_common.scss */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* line 289, ../styles/scss/_common.scss */
+.no-margin {
+  margin: 0 !important;
+}
+
+/** customize button **/
+/* line 2, ../styles/scss/_customize.scss */
+.btn {
+  padding: 14px 22px;
+  font-family: "OpenSans-Semibold";
+  font-size: 16px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  background-color: #525252;
+  border-color: #525252;
+  color: #ffffff;
+}
+/* line 11, ../styles/scss/_customize.scss */
+.btn.focus, .btn:focus, .btn:hover {
+  color: #ffffff;
+}
+
+/* line 15, ../styles/scss/_customize.scss */
+.btn-lg {
+  padding: 23px 39px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+
+/* line 19, ../styles/scss/_customize.scss */
+.btn-sm {
+  padding: 4px 12px;
+  font-size: 14px;
+  font-family: OpenSans;
+}
+
+/* line 24, ../styles/scss/_customize.scss */
+.btn-info {
+  background-color: #479ae0;
+  border-color: #479ae0;
+}
+
+/* line 28, ../styles/scss/_customize.scss */
+.btn-success {
+  background-color: #40cc7b;
+  border-color: #40cc7b;
+}
+
+/* line 32, ../styles/scss/_customize.scss */
+.btn.disabled,
+.btn[disabled],
+fieldset[disabled] .btn,
+.btn.disabled.focus,
+.btn.disabled:focus,
+.btn.disabled:hover,
+.btn[disabled].focus,
+.btn[disabled]:focus,
+.btn[disabled]:hover,
+fieldset[disabled] .btn.focus,
+fieldset[disabled] .btn:focus,
+fieldset[disabled] .btn:hover {
+  background-color: #dadada;
+  border-color: #dadada;
+}
+
+/* line 47, ../styles/scss/_customize.scss */
+.btn-round {
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+}
+
+/** customize modal **/
+/* line 52, ../styles/scss/_customize.scss */
+body.modal-open {
+  overflow-y: auto !important;
+  padding-right: 0 !important;
+}
+
+/* line 57, ../styles/scss/_customize.scss */
+.modal-scrollbar-measure {
+  overflow: hidden;
+}
+
+/* line 60, ../styles/scss/_customize.scss */
+.modal-content {
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  height: 100%;
+}
+
+/* line 64, ../styles/scss/_customize.scss */
+.modal-header {
+  padding: 34px 40px;
+  border-bottom: solid 1px #e7e7e7;
+}
+
+/* line 69, ../styles/scss/_customize.scss */
+.modal-title {
+  font-family: OpenSans;
+  font-size: 16px;
+}
+
+/* line 74, ../styles/scss/_customize.scss */
+.modal-body {
+  padding: 0 0 30px 0px;
+}
+
+/* line 79, ../styles/scss/_customize.scss */
+.modal-dialog a {
+  font-family: "OpenSans";
+  font-size: 16px;
+  color: #479ae0;
+  cursor: pointer;
+}
+/* line 86, ../styles/scss/_customize.scss */
+.modal-dialog form {
+  padding: 14px 40px 24px;
+}
+/* line 89, ../styles/scss/_customize.scss */
+.modal-dialog form h3 {
+  font-family: "OpenSans-Bold";
+  font-size: 24px;
+  margin-bottom: 11px;
+}
+/* line 95, ../styles/scss/_customize.scss */
+.modal-dialog form p {
+  font-family: "OpenSans-Light";
+  font-weight: lighter;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+/* line 103, ../styles/scss/_customize.scss */
+.modal-dialog .form-group {
+  margin-bottom: 30px;
+}
+/* line 106, ../styles/scss/_customize.scss */
+.modal-dialog .form-group label {
+  margin-bottom: 11px;
+}
+/* line 111, ../styles/scss/_customize.scss */
+.modal-dialog .modal-body .divider {
+  margin: 16px 0;
+}
+@media (min-width: 768px) {
+  /* line 78, ../styles/scss/_customize.scss */
+  .modal-dialog {
+    width: 555px;
+    height: 700px;
+  }
+  /* line 119, ../styles/scss/_customize.scss */
+  .auto-height .modal-dialog {
+    height: auto;
+  }
+}
+
+/** customize form controls **/
+/* line 126, ../styles/scss/_customize.scss */
+.form-control, .form-group label {
+  font-family: "OpenSans-Light";
+  font-weight: lighter;
+  font-size: 20px;
+  background-color: transparent;
+}
+
+/* line 133, ../styles/scss/_customize.scss */
+input.form-control,
+select.form-control {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  box-shadow: none;
+  padding: 5.5px 0;
+  color: #000000;
+}
+
+/* line 143, ../styles/scss/_customize.scss */
+textarea.form-control {
+  resize: none;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  padding: 15px 20px;
+  font-family: "OpenSans";
+  font-size: 14px;
+  box-shadow: none;
+  color: #000000;
+}
+
+/* line 153, ../styles/scss/_customize.scss */
+label.control-label {
+  color: #989898;
+}
+
+/* line 157, ../styles/scss/_customize.scss */
+.form-control {
+  border-color: #d8d8d8;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+}
+/* line 161, ../styles/scss/_customize.scss */
+.form-control:focus {
+  border-color: #479ae0;
+  -box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+}
+/* line 168, ../styles/scss/_customize.scss */
+.form-control.link {
+  color: #479ae0;
+}
+
+/* line 173, ../styles/scss/_customize.scss */
+.input-sm {
+  font-size: 14px;
+  padding: 15px 20px !important;
+  height: auto;
+}
+
+/** navbar **/
+@media (min-width: 768px) {
+  /* line 182, ../styles/scss/_customize.scss */
+  .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* line 1, ../styles/scss/_company.scss */
+.company-page {
+  padding-bottom: 154px;
+}
+/* line 4, ../styles/scss/_company.scss */
+.company-page .top-container {
+  padding: 80px 0 50px;
+  background-color: #f9f9f9;
+  text-align: left;
+}
+/* line 10, ../styles/scss/_company.scss */
+.company-page .industry-tokens-content {
+  margin-top: 35px;
+}
+/* line 14, ../styles/scss/_company.scss */
+.company-page .industry-tokens {
+  text-align: left;
+}
+/* line 17, ../styles/scss/_company.scss */
+.company-page .industry-tokens li {
+  background-color: #479ae0;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  padding: 17px 30px;
+  display: inline-block;
+  font-family: "OpenSans";
+  font-size: 16px;
+  color: #ffffff;
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
+/* line 28, ../styles/scss/_company.scss */
+.company-page .industry-tokens li .content {
+  margin-right: 20px;
+}
+/* line 32, ../styles/scss/_company.scss */
+.company-page .industry-tokens li .close {
+  color: #ffffff;
+}
+/* line 38, ../styles/scss/_company.scss */
+.company-page .map-wrapper {
+  margin-top: 50px;
+}
+/* line 41, ../styles/scss/_company.scss */
+.company-page .map-wrapper .on-map {
+  font-family: "OpenSans-Light";
+  font-size: 20px;
+  color: #989898;
+  cursor: pointer;
+}
+/* line 48, ../styles/scss/_company.scss */
+.company-page .map-wrapper .map-content {
+  width: 100%;
+  height: 570px;
+}
+/* line 54, ../styles/scss/_company.scss */
+.company-page .main-container {
+  padding-top: 50px;
+}
+/* line 58, ../styles/scss/_company.scss */
+.company-page .search-count {
+  font-family: "OpenSans-Light";
+  font-size: 26px;
+  color: #989898;
+  margin-bottom: 30px;
+}
+/* line 65, ../styles/scss/_company.scss */
+.company-page .company-item {
+  padding: 20px 20px 0 20px;
+  background-color: #202020;
+  margin-bottom: 30px;
+}
+/* line 70, ../styles/scss/_company.scss */
+.company-page .company-item .title {
+  margin-bottom: 25px;
+}
+/* line 74, ../styles/scss/_company.scss */
+.company-page .company-item .company-avatar {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+  float: left;
+}
+/* line 81, ../styles/scss/_company.scss */
+.company-page .company-item .company-name {
+  font-family: "OpenSans";
+  font-size: 26px;
+  color: #ffffff;
+  float: left;
+  line-height: 50px;
+}
+/* line 89, ../styles/scss/_company.scss */
+.company-page .company-item .btn.send-request {
+  font-family: "OpenSans-Semibold";
+  font-size: 16px;
+  padding: 16px 22px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+}
+/* line 97, ../styles/scss/_company.scss */
+.company-page .company-item .info-list li {
+  width: 33%;
+  display: block;
+  margin-bottom: 20px;
+  vertical-align: top;
+  float: left;
+  color: #ffffff;
+}
+/* line 105, ../styles/scss/_company.scss */
+.company-page .company-item .info-list li .info-title {
+  font-family: "OpenSans-Light";
+  font-size: 20px;
+}
+/* line 110, ../styles/scss/_company.scss */
+.company-page .company-item .info-list li .info-desc {
+  font-family: "OpenSans-Semibold";
+  font-size: 14px;
+}
+
+/* line 120, ../styles/scss/_company.scss */
+.company-profile-page .top-container {
+  background-color: #313131;
+  text-align: center;
+  padding: 110px 0 50px;
+}
+/* line 126, ../styles/scss/_company.scss */
+.company-profile-page .main-container {
+  padding-top: 37px;
+  padding-bottom: 50px;
+}
+
+/* line 133, ../styles/scss/_company.scss */
+.searchByIndustry.dropdown-custom .content {
+  height: auto;
+  padding: 0;
+  overflow: hidden;
+}
+/* line 138, ../styles/scss/_company.scss */
+.searchByIndustry.dropdown-custom .content > .industry-list {
+  padding: 10px 0;
+  height: 400px;
+}
+/* line 143, ../styles/scss/_company.scss */
+.searchByIndustry.dropdown-custom .content .item {
+  position: relative;
+}
+/* line 146, ../styles/scss/_company.scss */
+.searchByIndustry.dropdown-custom .content .item:nth-child(2n+3) {
+  background-color: #313131;
+}
+/* line 150, ../styles/scss/_company.scss */
+.searchByIndustry.dropdown-custom .content .item.filtered:after {
+  content: "";
+  position: absolute;
+  right: 35px;
+  top: 16px;
+  display: block;
+  background-color: #479ae0;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  width: 10px;
+  height: 10px;
+}
+/* line 163, ../styles/scss/_company.scss */
+.searchByIndustry.dropdown-custom .content .button-area a {
+  width: 50%;
+  height: 60px;
+  background-color: #313131;
+  display: block;
+  float: left;
+  text-align: center;
+  padding: 18px 0;
+  font-family: "OpenSans";
+  font-size: 18px;
+  color: #ffffff;
+}
+/* line 175, ../styles/scss/_company.scss */
+.searchByIndustry.dropdown-custom .content .button-area a:hover {
+  background-color: #479ae0;
+}
+
+/* line 2, ../styles/scss/_conversation.scss */
+.conv-page .wrapper {
+  border-bottom: solid 1px #ebebeb;
+  padding-left: 30px;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+/* line 10, ../styles/scss/_conversation.scss */
+.conv-page .top-container .wrapper {
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+/* line 15, ../styles/scss/_conversation.scss */
+.conv-page .top-container h3 {
+  font-family: "OpenSans";
+  font-size: 20px;
+  line-height: 34px;
+  text-align: left;
+}
+/* line 23, ../styles/scss/_conversation.scss */
+.conv-page ul.view-mode {
+  display: table;
+  text-align: left;
+}
+/* line 27, ../styles/scss/_conversation.scss */
+.conv-page ul.view-mode li {
+  margin-right: 17px;
+  display: inline-block;
+  line-height: 34px;
+  height: 34px;
+}
+/* line 33, ../styles/scss/_conversation.scss */
+.conv-page ul.view-mode li a {
+  font-size: 12px;
+  font-family: "OpenSans-Semibold";
+  color: #989898;
+  cursor: pointer;
+}
+/* line 40, ../styles/scss/_conversation.scss */
+.conv-page ul.view-mode li.selected a {
+  color: #479ae0;
+}
+/* line 46, ../styles/scss/_conversation.scss */
+.conv-page .typing-text {
+  font-size: 16px;
+  width: 340px;
+}
+/* line 52, ../styles/scss/_conversation.scss */
+.conv-page .conv-company-list li {
+  height: 120px;
+  padding-top: 28px;
+}
+/* line 56, ../styles/scss/_conversation.scss */
+.conv-page .conv-company-list li .company-logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+}
+/* line 61, ../styles/scss/_conversation.scss */
+.conv-page .conv-company-list li .company-logo > img {
+  width: 25px;
+  height: 50px;
+  float: left;
+}
+/* line 68, ../styles/scss/_conversation.scss */
+.conv-page .conv-company-list li .company-name {
+  font-size: 16px;
+  line-height: 1.4;
+}
+/* line 73, ../styles/scss/_conversation.scss */
+.conv-page .conv-company-list li .company-desc {
+  font-family: "OpenSans-Light";
+  font-size: 14px;
+  color: #000000;
+  display: block;
+}
+/* line 82, ../styles/scss/_conversation.scss */
+.conv-page .mng-conv-wrapper {
+  height: 120px;
+  padding-top: 32px;
+}
+/* line 86, ../styles/scss/_conversation.scss */
+.conv-page .mng-conv-wrapper h3 {
+  font-family: "OpenSans-Light";
+  font-size: 20px;
+  line-height: 1.4;
+  color: #989898;
+  width: 600px;
+}
+/* line 96, ../styles/scss/_conversation.scss */
+.conv-page .conv-list li {
+  height: 120px;
+  padding: 5px 20px;
+}
+/* line 100, ../styles/scss/_conversation.scss */
+.conv-page .conv-list li .conv-wrapper {
+  width: 665px;
+  height: 100%;
+  padding: 10px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+}
+/* line 106, ../styles/scss/_conversation.scss */
+.conv-page .conv-list li .conv-wrapper > .user-avatar {
+  width: 30px;
+  height: 30px;
+  margin-top: 20px;
+  margin-right: 15px;
+  float: left;
+}
+/* line 114, ../styles/scss/_conversation.scss */
+.conv-page .conv-list li .conv-wrapper > .chat-content {
+  display: inline-block;
+  font-size: 14px;
+}
+/* line 119, ../styles/scss/_conversation.scss */
+.conv-page .conv-list li .conv-wrapper .user-name {
+  font-family: "OpenSans";
+}
+/* line 123, ../styles/scss/_conversation.scss */
+.conv-page .conv-list li .conv-wrapper .chat-data {
+  font-family: "OpenSans-Light";
+  line-height: 1.6;
+}
+/* line 128, ../styles/scss/_conversation.scss */
+.conv-page .conv-list li .conv-wrapper a {
+  font-family: "OpenSans";
+}
+/* line 132, ../styles/scss/_conversation.scss */
+.conv-page .conv-list li .conv-wrapper .chat-time {
+  font-family: "OpenSans";
+  font-size: 12px;
+  color: #989898;
+  margin-top: 6px;
+}
+/* line 142, ../styles/scss/_conversation.scss */
+.conv-page .footer {
+  height: 175px;
+  padding: 20px;
+}
+/* line 146, ../styles/scss/_conversation.scss */
+.conv-page .footer ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+/* line 150, ../styles/scss/_conversation.scss */
+.conv-page .footer ul li a {
+  font-family: "OpenSans";
+  font-size: 10px;
+  color: #989898;
+}
+
+/* line 159, ../styles/scss/_conversation.scss */
+.conv-mng-page {
+  background-color: #313131;
+}
+/* line 162, ../styles/scss/_conversation.scss */
+.conv-mng-page .conv-select-container {
+  padding-top: 40px;
+  background-color: #202020;
+}
+/* line 168, ../styles/scss/_conversation.scss */
+.conv-mng-page .conv-user .user-avatar {
+  width: 40px;
+  height: 40px;
+}
+/* line 173, ../styles/scss/_conversation.scss */
+.conv-mng-page .conv-user .user-name {
+  color: #ffffff;
+  font-family: "OpenSans";
+  font-size: 18px;
+}
+/* line 179, ../styles/scss/_conversation.scss */
+.conv-mng-page .conv-user .user-level {
+  color: #989898;
+  font-family: "OpenSans";
+  font-size: 12px;
+  line-height: 17px;
+}
+/* line 185, ../styles/scss/_conversation.scss */
+.conv-mng-page .conv-user .user-level > .company {
+  color: #ffffff;
+}
+/* line 191, ../styles/scss/_conversation.scss */
+.conv-mng-page .mng-section {
+  margin-bottom: 40px;
+}
+/* line 194, ../styles/scss/_conversation.scss */
+.conv-mng-page .mng-section h3.title {
+  font-family: "OpenSans";
+  font-size: 16px;
+  color: #989898;
+  margin-bottom: 25px;
+}
+/* line 202, ../styles/scss/_conversation.scss */
+.conv-mng-page .company-list-wrapper,
+.conv-mng-page .depart-list-wrapper,
+.conv-mng-page .people-list-wrapper {
+  width: 100%;
+  padding-bottom: 20px;
+}
+/* line 209, ../styles/scss/_conversation.scss */
+.conv-mng-page .company-list,
+.conv-mng-page .depart-list,
+.conv-mng-page .conv-people-list {
+  white-space: nowrap;
+}
+/* line 216, ../styles/scss/_conversation.scss */
+.conv-mng-page .company-list li {
+  display: inline-block;
+  margin-right: 60px;
+  opacity: 0.5;
+  cursor: pointer;
+}
+/* line 222, ../styles/scss/_conversation.scss */
+.conv-mng-page .company-list li.selected, .conv-mng-page .company-list li:hover {
+  opacity: 1;
+}
+/* line 227, ../styles/scss/_conversation.scss */
+.conv-mng-page .company-list li .company-logo {
+  width: 50px;
+  height: 50px;
+}
+/* line 232, ../styles/scss/_conversation.scss */
+.conv-mng-page .company-list li .company-name {
+  color: #ffffff;
+}
+/* line 239, ../styles/scss/_conversation.scss */
+.conv-mng-page .depart-list li {
+  padding: 17px 30px;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  color: #ffffff;
+  border: 1px dashed #979797;
+  display: inline-block;
+  margin-right: 15px;
+}
+/* line 247, ../styles/scss/_conversation.scss */
+.conv-mng-page .depart-list li.selected, .conv-mng-page .depart-list li:hover {
+  background-color: #479ae0;
+  border: 1px dashed #479ae0;
+  cursor: pointer;
+}
+/* line 257, ../styles/scss/_conversation.scss */
+.conv-mng-page .conv-people-list li {
+  display: inline-block;
+  margin-right: 90px;
+  cursor: pointer;
+}
+/* line 262, ../styles/scss/_conversation.scss */
+.conv-mng-page .conv-people-list li.selected img, .conv-mng-page .conv-people-list li:hover img {
+  position: relative;
+  opacity: 0.4;
+}
+/* line 268, ../styles/scss/_conversation.scss */
+.conv-mng-page .conv-people-list li.selected img:after, .conv-mng-page .conv-people-list li:hover img:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 20px;
+  height: 14px;
+  margin-left: -10px;
+  margin-top: -7px;
+  background: url("../images/check-icon.png") no-repeat scroll 0 0 transparent;
+}
+/* line 283, ../styles/scss/_conversation.scss */
+.conv-mng-page .conv-people-list .user-avatar {
+  width: 50px;
+  height: 50px;
+}
+/* line 288, ../styles/scss/_conversation.scss */
+.conv-mng-page .conv-people-list .user-name {
+  color: #ffffff;
+}
+/* line 293, ../styles/scss/_conversation.scss */
+.conv-mng-page .conv-members-container {
+  padding: 60px 0 120px;
+}
+/* line 296, ../styles/scss/_conversation.scss */
+.conv-mng-page .conv-members-container h2.conv-members-title {
+  font-family: "OpenSans-Light";
+  font-size: 34px;
+  color: #777777;
+  line-height: 1.4;
+  display: inline-block;
+}
+/* line 305, ../styles/scss/_conversation.scss */
+.conv-mng-page .conv-members-container .actions button {
+  margin-left: 15px;
+}
+/* line 309, ../styles/scss/_conversation.scss */
+.conv-mng-page .conv-members-container .actions .icon {
+  margin-left: 15px;
+}
+
+/* line 1, ../styles/scss/_header.scss */
+.navbar-custom {
+  margin-bottom: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+  background-color: #313131;
+}
+/* line 10, ../styles/scss/_header.scss */
+.navbar-custom.gray-bg {
+  position: relative !important;
+}
+@media (min-width: 768px) {
+  /* line 10, ../styles/scss/_header.scss */
+  .navbar-custom.gray-bg {
+    background-color: #313131;
+  }
+}
+/* line 18, ../styles/scss/_header.scss */
+.navbar-custom .navbar-brand {
+  font-family: OpenSans-Bold;
+  font-size: 30px;
+  color: #ffffff;
+  display: inline-block;
+  line-height: 40px;
+  height: 40px;
+  padding: 8px 20px;
+}
+/* line 28, ../styles/scss/_header.scss */
+.navbar-custom .navbar-toggle {
+  color: #ffffff;
+}
+/* line 32, ../styles/scss/_header.scss */
+.navbar-custom .navbar-nav > li {
+  margin-left: 60px;
+}
+/* line 36, ../styles/scss/_header.scss */
+.navbar-custom .navbar-nav > li > a {
+  line-height: 40px;
+  padding: 0;
+  font-family: OpenSans-Semibold;
+  font-size: 16px;
+  color: #ffffff;
+  cursor: pointer;
+}
+/* line 45, ../styles/scss/_header.scss */
+.navbar-custom .navbar-nav > li .user-info .user-avatar {
+  width: 50px;
+  height: 50px;
+  margin-left: 15px;
+  margin-right: 0;
+}
+/* line 52, ../styles/scss/_header.scss */
+.navbar-custom .navbar-nav > li .user-name,
+.navbar-custom .navbar-nav > li .user-role {
+  color: #ffffff;
+}
+/* line 57, ../styles/scss/_header.scss */
+.navbar-custom .nav > li > a:focus,
+.navbar-custom .nav > li > a:hover {
+  background-color: transparent;
+}
+/* line 62, ../styles/scss/_header.scss */
+.navbar-custom .nav > li .dropdown-menu.dropdown-custom-menu {
+  margin-top: 10px;
+  background-color: #202020;
+  padding: 0;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+}
+@media (min-width: 768px) {
+  /* line 1, ../styles/scss/_header.scss */
+  .navbar-custom {
+    padding: 25px 0;
+    border-bottom: 0;
+    letter-spacing: 1px;
+    background: 0 0;
+  }
+  /* line 75, ../styles/scss/_header.scss */
+  .navbar-custom.top-nav-collapse {
+    padding: 0;
+    background: #000000;
+  }
+  /* line 80, ../styles/scss/_header.scss */
+  .navbar-custom .navbar-nav > li > a.btn-signin {
+    margin-top: -5px;
+    width: 102px;
+    height: 50px;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border: solid 1px #7c7c7c;
+    line-height: 50px;
+    text-align: center;
+  }
+}
+
+/* line 93, ../styles/scss/_header.scss */
+.dropdown-menu.dropdown-custom-menu > li {
+  width: 180px;
+  height: 40px;
+  text-align: right;
+}
+/* line 98, ../styles/scss/_header.scss */
+.dropdown-menu.dropdown-custom-menu > li > a {
+  color: #ffffff;
+  font-family: "OpenSans";
+  font-size: 14px;
+  line-height: 40px;
+  padding: 0 30px;
+  cursor: pointer;
+}
+/* line 106, ../styles/scss/_header.scss */
+.dropdown-menu.dropdown-custom-menu > li > a:hover {
+  background-color: #479ae0;
+}
+
+/* line 1, ../styles/scss/_footer.scss */
+#footer {
+  width: 100%;
+  padding: 56px 0 97px;
+  background-color: #202020;
+}
+/* line 6, ../styles/scss/_footer.scss */
+#footer .logo {
+  font-family: OpenSans-Bold;
+  font-size: 30px;
+  color: #ffffff;
+  display: inline-block;
+  line-height: 55px;
+  height: 55px;
+  width: 100%;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  /* line 6, ../styles/scss/_footer.scss */
+  #footer .logo {
+    text-align: left;
+  }
+}
+/* line 21, ../styles/scss/_footer.scss */
+#footer .bottom-menu {
+  text-align: center;
+}
+/* line 24, ../styles/scss/_footer.scss */
+#footer .bottom-menu li {
+  display: inline-block;
+  padding: 0 18px;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  /* line 24, ../styles/scss/_footer.scss */
+  #footer .bottom-menu li {
+    width: auto;
+  }
+}
+/* line 33, ../styles/scss/_footer.scss */
+#footer .bottom-menu li a {
+  font-family: "OpenSans-Semibold";
+  font-size: 12px;
+  color: #ffffff;
+  line-height: 55px;
+}
+/* line 42, ../styles/scss/_footer.scss */
+#footer .social-links {
+  text-align: center;
+  padding-top: 6px;
+}
+@media (min-width: 768px) {
+  /* line 42, ../styles/scss/_footer.scss */
+  #footer .social-links {
+    text-align: right;
+  }
+}
+/* line 50, ../styles/scss/_footer.scss */
+#footer .social-links a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: solid 1px #535353;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  text-align: center;
+  color: #ffffff;
+  line-height: 38px;
+  margin-left: 10px;
+  font-size: 16px;
+}
+/* line 64, ../styles/scss/_footer.scss */
+#footer .copyright {
+  margin-top: 20px;
+}
+@media (min-width: 768px) {
+  /* line 64, ../styles/scss/_footer.scss */
+  #footer .copyright {
+    margin-top: 101px;
+  }
+}
+/* line 71, ../styles/scss/_footer.scss */
+#footer .copyright p {
+  font-family: "OpenSans";
+  font-size: 14px;
+  color: #c5c5c5;
+  line-height: 1.5;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  /* line 71, ../styles/scss/_footer.scss */
+  #footer .copyright p {
+    text-align: left;
+  }
+}
+/* line 82, ../styles/scss/_footer.scss */
+#footer .copyright p.company-reserved {
+  text-align: center;
+  margin-top: 10px;
+}
+@media (min-width: 768px) {
+  /* line 82, ../styles/scss/_footer.scss */
+  #footer .copyright p.company-reserved {
+    text-align: right;
+    margin: 0;
+  }
+}
+
+/* line 1, ../styles/scss/_home.scss */
+.intro {
+  display: table;
+  width: 100%;
+  height: auto;
+  padding: 100px 0;
+  text-align: center;
+  color: #ffffff;
+  background: url(../../assets/images/landing-top-bg.jpg) no-repeat bottom center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+@media (min-width: 768px) {
+  /* line 1, ../styles/scss/_home.scss */
+  .intro {
+    height: 100%;
+    padding: 244px 0 142px;
+  }
+}
+/* line 16, ../styles/scss/_home.scss */
+.intro .intro-body {
+  display: table-cell;
+  vertical-align: middle;
+}
+/* line 20, ../styles/scss/_home.scss */
+.intro .intro-body .brand-heading {
+  font-family: "OpenSans-Light";
+  color: #ffffff;
+  margin-bottom: 60px;
+  font-size: 40px;
+}
+@media (min-width: 768px) {
+  /* line 20, ../styles/scss/_home.scss */
+  .intro .intro-body .brand-heading {
+    font-size: 54px;
+  }
+}
+/* line 31, ../styles/scss/_home.scss */
+.intro .intro-body .get-started {
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  box-shadow: 0 3px 30px 0 rgba(25, 25, 25, 0.5);
+  font-family: "OpenSans-Bold";
+  font-size: 18px;
+}
+/* line 39, ../styles/scss/_home.scss */
+.intro.bottom {
+  background-color: #313131;
+  background-image: none;
+}
+@media (min-width: 768px) {
+  /* line 39, ../styles/scss/_home.scss */
+  .intro.bottom {
+    padding: 80px 0;
+  }
+}
+
+/* line 50, ../styles/scss/_home.scss */
+.landing-page section {
+  padding: 80px 0;
+}
+/* line 53, ../styles/scss/_home.scss */
+.landing-page section h2 {
+  font-family: "OpenSans-Light";
+  text-align: center;
+}
+/* line 60, ../styles/scss/_home.scss */
+.landing-page .steps-container h2 {
+  margin-bottom: 80px;
+}
+/* line 64, ../styles/scss/_home.scss */
+.landing-page .steps-container h4 {
+  margin-bottom: 20px;
+  font-family: "OpenSans";
+  line-height: 1.3;
+}
+/* line 72, ../styles/scss/_home.scss */
+.landing-page .company-container h2 {
+  margin-bottom: 80px;
+}
+/* line 76, ../styles/scss/_home.scss */
+.landing-page .company-container h3 {
+  line-height: 1.3;
+}
+/* line 80, ../styles/scss/_home.scss */
+.landing-page .company-container .company-seo {
+  margin-top: 50px;
+  text-align: center;
+}
+/* line 84, ../styles/scss/_home.scss */
+.landing-page .company-container .company-seo .user-name {
+  margin-top: 10px;
+}
+/* line 88, ../styles/scss/_home.scss */
+.landing-page .company-container .company-seo .user-level {
+  margin-top: 3px;
+}
+/* line 95, ../styles/scss/_home.scss */
+.landing-page .team-container h2 {
+  margin-bottom: 84px;
+}
+/* line 100, ../styles/scss/_home.scss */
+.landing-page .team-member {
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  background-color: #ffffff;
+  padding: 20px;
+  margin-bottom: 30px;
+  position: relative;
+}
+/* line 107, ../styles/scss/_home.scss */
+.landing-page .team-member .twitter-link {
+  position: absolute;
+  display: block;
+  top: 20px;
+  right: 20px;
+}
+/* line 113, ../styles/scss/_home.scss */
+.landing-page .team-member .twitter-link i {
+  color: #479ae0;
+  font-size: 20px;
+}
+/* line 119, ../styles/scss/_home.scss */
+.landing-page .team-member .user-info {
+  margin-bottom: 20px;
+  float: left;
+}
+
+/* line 127, ../styles/scss/_home.scss */
+.home-page .top-container {
+  background-color: #313131;
+  padding: 110px 0 50px;
+  position: relative;
+}
+/* line 133, ../styles/scss/_home.scss */
+.home-page .main-container {
+  padding-top: 37px;
+  padding-bottom: 50px;
+}
+
+/* line 139, ../styles/scss/_home.scss */
+.basic-info {
+  margin-top: 30px;
+  width: 100%;
+}
+/* line 143, ../styles/scss/_home.scss */
+.basic-info h3 {
+  font-family: "OpenSans-Light";
+  color: #989898;
+  line-height: 1.4;
+}
+/* line 149, ../styles/scss/_home.scss */
+.basic-info a {
+  font-family: "OpenSans-Light";
+  font-size: 18px;
+  min-height: 25px;
+  display: block;
+}
+/* line 156, ../styles/scss/_home.scss */
+.basic-info p {
+  font-family: "OpenSans-Light";
+  font-size: 18px;
+  color: #000000;
+  min-height: 25px;
+}
+/* line 163, ../styles/scss/_home.scss */
+.basic-info .user-info {
+  width: 100%;
+  margin-top: 10px;
+}
+/* line 168, ../styles/scss/_home.scss */
+.basic-info .user-avatar {
+  width: 68px;
+  height: 68px;
+}
+/* line 173, ../styles/scss/_home.scss */
+.basic-info .user-name {
+  margin-bottom: 2px;
+  line-height: 1;
+  font-family: "OpenSans-Light";
+  font-size: 18px;
+  color: #000000;
+}
+/* line 181, ../styles/scss/_home.scss */
+.basic-info .user-level {
+  font-family: "OpenSans";
+  font-size: 12px;
+  color: #989898;
+}
+
+/* line 188, ../styles/scss/_home.scss */
+.basic-info-wrapper {
+  margin-top: 74px;
+}
+/* line 191, ../styles/scss/_home.scss */
+.basic-info-wrapper .info {
+  background-color: #f9f9f9;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  margin-bottom: 30px;
+}
+/* line 196, ../styles/scss/_home.scss */
+.basic-info-wrapper .info .info-title {
+  padding: 30px;
+}
+/* line 199, ../styles/scss/_home.scss */
+.basic-info-wrapper .info .info-title h5 {
+  font-family: "OpenSans";
+  font-size: 16px;
+  color: #989898;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+/* line 208, ../styles/scss/_home.scss */
+.basic-info-wrapper .info .info-body {
+  padding: 25px 30px;
+  height: 415px;
+  width: 100%;
+  display: table;
+  vertical-align: middle;
+}
+/* line 215, ../styles/scss/_home.scss */
+.basic-info-wrapper .info .info-body .comment {
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  font-family: "OpenSans-Light";
+  font-size: 30px;
+  color: #989898;
+}
+/* line 224, ../styles/scss/_home.scss */
+.basic-info-wrapper .info .info-body.has-data {
+  display: block;
+}
+/* line 227, ../styles/scss/_home.scss */
+.basic-info-wrapper .info .info-body.has-data .comment {
+  display: none !important;
+}
+
+/* line 235, ../styles/scss/_home.scss */
+.friend-list {
+  width: 100%;
+}
+/* line 238, ../styles/scss/_home.scss */
+.friend-list li {
+  width: 50%;
+  margin-bottom: 20px;
+  display: inline-block;
+  float: left;
+}
+
+/* line 247, ../styles/scss/_home.scss */
+.fb-user-list li {
+  width: 50%;
+  margin-bottom: 20px;
+  display: inline-block;
+  float: left;
+}
+/* line 253, ../styles/scss/_home.scss */
+.fb-user-list li .user-avatar {
+  width: 68px;
+  height: 68px;
+}
+/* line 258, ../styles/scss/_home.scss */
+.fb-user-list li .user-data {
+  width: calc(100% - 88px);
+  word-wrap: break-word;
+}
+/* line 263, ../styles/scss/_home.scss */
+.fb-user-list li .user-name {
+  font-family: "OpenSans-Light";
+}
+
+/* line 270, ../styles/scss/_home.scss */
+.affli-company-list li {
+  width: 50%;
+  margin-bottom: 20px;
+  display: inline-block;
+  float: left;
+}
+/* line 276, ../styles/scss/_home.scss */
+.affli-company-list li .company-logo {
+  width: 90px;
+  height: 90px;
+}
+/* line 281, ../styles/scss/_home.scss */
+.affli-company-list li .company-name {
+  font-family: "OpenSans-Light";
+  font-size: 22px;
+}
+/* line 286, ../styles/scss/_home.scss */
+.affli-company-list li .company-role {
+  font-family: "OpenSans";
+  font-size: 14px;
+  display: block;
+}
+
+/* line 1, ../styles/scss/_icons.scss */
+.edit-icon {
+  background: url("../images/edit-icon-black.png") no-repeat scroll 0 0 transparent;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+/* line 9, ../styles/scss/_icons.scss */
+.edit-icon.white {
+  background-image: url("../images/edit-icon-white.png");
+}
+
+/* line 14, ../styles/scss/_icons.scss */
+.close-icon {
+  display: inline-block;
+}
+/* line 17, ../styles/scss/_icons.scss */
+.close-icon.bold-gray {
+  background-image: url("../images/close-icon-bold-gray.png");
+  width: 14px;
+  height: 14px;
+}
+/* line 23, ../styles/scss/_icons.scss */
+.close-icon.bold-white {
+  background-image: url("../images/close-icon-bold-white.png");
+  width: 14px;
+  height: 14px;
+}
+/* line 29, ../styles/scss/_icons.scss */
+.close-icon.large-gray {
+  background-image: url("../images/close-icon-large-gray.png");
+  width: 20px;
+  height: 18px;
+}
+/* line 35, ../styles/scss/_icons.scss */
+.close-icon.large-white {
+  background-image: url("../images/close-icon-large-white.png");
+  width: 20px;
+  height: 18px;
+}
+/* line 41, ../styles/scss/_icons.scss */
+.close-icon.thin-gray {
+  background-image: url("../images/close-icon-thin-gray.png");
+  width: 14px;
+  height: 12px;
+}
+/* line 47, ../styles/scss/_icons.scss */
+.close-icon.thin-white {
+  background-image: url("../images/close-icon-thin-white.png");
+  width: 14px;
+  height: 12px;
+}
+
+/* line 54, ../styles/scss/_icons.scss */
+.check {
+  width: 20px;
+  height: 14px;
+  display: inline-block;
+  background: url("../images/check-icon.png") no-repeat scroll 0 0 transparent;
+}
+/* line 60, ../styles/scss/_icons.scss */
+.check.white-icon {
+  background-image: url("../images/check-icon-white.png") !important;
+}
+
+/* line 65, ../styles/scss/_icons.scss */
+.edit-cover-icon {
+  width: 27px;
+  height: 21px;
+  background-image: url("../images/photo-icon-gray.png");
+  display: inline-block;
+}
+
+/* line 1, ../styles/scss/_modal.scss */
+.edit-friends-form {
+  padding: 0 !important;
+}
+/* line 4, ../styles/scss/_modal.scss */
+.edit-friends-form .searchByIndustry {
+  margin: 50px 0;
+}
+/* line 8, ../styles/scss/_modal.scss */
+.edit-friends-form .friend-list-wrapper {
+  height: 600px;
+}
+/* line 13, ../styles/scss/_modal.scss */
+.edit-friends-form .friend-list li {
+  margin-bottom: 20px;
+  width: 100%;
+}
+/* line 17, ../styles/scss/_modal.scss */
+.edit-friends-form .friend-list li .company-name {
+  color: #ffffff;
+  font-family: "OpenSans";
+  font-size: 18px;
+}
+/* line 23, ../styles/scss/_modal.scss */
+.edit-friends-form .friend-list li .company-info {
+  display: inline-block;
+}
+/* line 27, ../styles/scss/_modal.scss */
+.edit-friends-form .friend-list li .actions {
+  line-height: 68px;
+}
+/* line 30, ../styles/scss/_modal.scss */
+.edit-friends-form .friend-list li .actions .go-to-conv {
+  color: #ffffff;
+}
+/* line 34, ../styles/scss/_modal.scss */
+.edit-friends-form .friend-list li .actions .close-icon {
+  float: none;
+  display: inline-block;
+  margin: 0 45px;
+}
+
+/* line 45, ../styles/scss/_modal.scss */
+.create-conv-modal-header h4 {
+  font-size: 24px;
+}
+/* line 49, ../styles/scss/_modal.scss */
+.create-conv-modal-header .close {
+  margin-top: 2px;
+}
+
+/* line 54, ../styles/scss/_modal.scss */
+.create-conv-form {
+  padding: 30px 40px 24px !important;
+}
+/* line 57, ../styles/scss/_modal.scss */
+.create-conv-form label {
+  color: #989898;
+  margin-bottom: 5px !important;
+}
+/* line 62, ../styles/scss/_modal.scss */
+.create-conv-form .drag-drop-content {
+  padding: 50px 0;
+  text-align: center;
+  font-family: "OpenSans";
+  font-size: 18px;
+  text-align: center;
+  color: #ffffff;
+  background-image: linear-gradient(108deg, #74e8b2, #40ccbf);
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  margin-bottom: 20px;
+}
+/* line 74, ../styles/scss/_modal.scss */
+.create-conv-form .uploaded-file-list {
+  margin-bottom: 40px;
+}
+/* line 77, ../styles/scss/_modal.scss */
+.create-conv-form .uploaded-file-list li {
+  margin-bottom: 10px;
+  font-family: "OpenSans";
+  font-size: 12px;
+  color: #000000;
+  position: relative;
+  width: 100%;
+  padding-left: 23px;
+}
+/* line 86, ../styles/scss/_modal.scss */
+.create-conv-form .uploaded-file-list li:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: url("../images/document-icon.png") no-repeat scroll 0 0 transparent;
+  display: block;
+  width: 13px;
+  height: 17px;
+}
+/* line 98, ../styles/scss/_modal.scss */
+.create-conv-form .uploaded-file-list li .actions > a {
+  display: inline-block;
+  float: none;
+}
+/* line 103, ../styles/scss/_modal.scss */
+.create-conv-form .uploaded-file-list li .actions > .loading-text {
+  font-family: "OpenSans-Semibold";
+  font-size: 12px;
+  color: #bebebe;
+}
+/* line 112, ../styles/scss/_modal.scss */
+.create-conv-form .conv-subject {
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+}
+/* line 116, ../styles/scss/_modal.scss */
+.create-conv-form .conv-desc {
+  height: 200px;
+}
+
+/* line 121, ../styles/scss/_modal.scss */
+.create-conv-modal-footer {
+  padding: 0;
+}
+/* line 124, ../styles/scss/_modal.scss */
+.create-conv-modal-footer button {
+  font-family: "OpenSans-Bold";
+  font-size: 14px;
+  padding: 25px 0;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+}
+
+/* line 132, ../styles/scss/_modal.scss */
+.transparent-backdrop.modal-backdrop.in {
+  filter: alpha(opacity=90);
+  opacity: .9;
+}
+
+/* line 138, ../styles/scss/_modal.scss */
+.transparent-modal .modal-content {
+  background-color: transparent;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  border: none;
+  color: #ffffff;
+}
+/* line 147, ../styles/scss/_modal.scss */
+.transparent-modal .modal-header {
+  padding: 0;
+  border: none;
+}
+/* line 151, ../styles/scss/_modal.scss */
+.transparent-modal .modal-header .close-icon {
+  margin-top: 10px;
+}
+/* line 156, ../styles/scss/_modal.scss */
+.transparent-modal .modal-title {
+  font-family: "OpenSans-Light";
+  font-size: 22px;
+}
+@media (min-width: 768px) {
+  /* line 162, ../styles/scss/_modal.scss */
+  .transparent-modal .modal-dialog {
+    width: 555px;
+    height: auto;
+  }
+}
+
+/* line 1, ../styles/scss/_settings.scss */
+.settings-page {
+  padding-bottom: 80px;
+}
+/* line 4, ../styles/scss/_settings.scss */
+.settings-page .top-container {
+  padding-top: 60px;
+}
+/* line 7, ../styles/scss/_settings.scss */
+.settings-page .top-container h1 {
+  font-family: "OpenSans-Light";
+  font-size: 50px;
+  text-align: left;
+}
+/* line 14, ../styles/scss/_settings.scss */
+.settings-page .left-content {
+  padding-right: 110px;
+}
+/* line 18, ../styles/scss/_settings.scss */
+.settings-page .settings-main-tabs {
+  text-align: left;
+  border-bottom: solid 1px #ededed;
+}
+/* line 22, ../styles/scss/_settings.scss */
+.settings-page .settings-main-tabs li {
+  display: inline-block;
+  width: 32%;
+}
+/* line 26, ../styles/scss/_settings.scss */
+.settings-page .settings-main-tabs li a {
+  font-family: "OpenSans-Light";
+  font-size: 22px;
+  color: #000000;
+  padding: 30px 0;
+  display: inline-block;
+  cursor: pointer;
+}
+/* line 35, ../styles/scss/_settings.scss */
+.settings-page .settings-main-tabs li.active a {
+  border-bottom: solid 1px #479ae0;
+}
+/* line 41, ../styles/scss/_settings.scss */
+.settings-page .settings-sub-tabs {
+  text-align: left;
+  margin-bottom: 100px;
+}
+/* line 45, ../styles/scss/_settings.scss */
+.settings-page .settings-sub-tabs li {
+  display: block;
+  padding: 20px;
+  cursor: pointer;
+}
+/* line 50, ../styles/scss/_settings.scss */
+.settings-page .settings-sub-tabs li a {
+  font-family: "OpenSans";
+  font-size: 16px;
+  color: #000000;
+  display: block;
+}
+/* line 57, ../styles/scss/_settings.scss */
+.settings-page .settings-sub-tabs li.active {
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  background-color: #479ae0;
+}
+/* line 61, ../styles/scss/_settings.scss */
+.settings-page .settings-sub-tabs li.active a {
+  color: #ffffff;
+}
+/* line 68, ../styles/scss/_settings.scss */
+.settings-page .main-container {
+  padding-top: 105px;
+}
+/* line 73, ../styles/scss/_settings.scss */
+.settings-page .settings-form .form-group {
+  margin-bottom: 35px;
+}
+/* line 77, ../styles/scss/_settings.scss */
+.settings-page .settings-form h3.settings-title {
+  font-family: "OpenSans-Light";
+  font-size: 22px;
+  color: #000000;
+  margin-bottom: 40px;
+  line-height: 1.5;
+}
+/* line 87, ../styles/scss/_settings.scss */
+.settings-page .socials-settings li {
+  border-bottom: solid 1px #d8d8d8;
+  position: relative;
+  margin-bottom: 40px;
+}
+/* line 92, ../styles/scss/_settings.scss */
+.settings-page .socials-settings li .social-icon {
+  position: absolute;
+  width: 25px;
+  left: 0;
+  bottom: 5.5px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 1;
+  color: #d7d7d7;
+}
+/* line 103, ../styles/scss/_settings.scss */
+.settings-page .socials-settings li input.form-control {
+  border: none;
+  padding: 5.5px 60px;
+}
+/* line 108, ../styles/scss/_settings.scss */
+.settings-page .socials-settings li input.url {
+  padding: 5.5px 60px 5.5px 0;
+}
+/* line 112, ../styles/scss/_settings.scss */
+.settings-page .socials-settings li .social-actions {
+  position: absolute;
+  right: 0;
+  bottom: 5.5px;
+}
+/* line 118, ../styles/scss/_settings.scss */
+.settings-page .socials-settings li .check,
+.settings-page .socials-settings li .close-icon {
+  margin-left: 20px;
+}
+/* line 126, ../styles/scss/_settings.scss */
+.settings-page .affi-list li {
+  border-bottom: solid 1px #d8d8d8;
+  position: relative;
+  margin-bottom: 40px;
+}
+/* line 131, ../styles/scss/_settings.scss */
+.settings-page .affi-list li .company-icon {
+  position: absolute;
+  width: 25px;
+  left: 0;
+  bottom: 5.5px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 1;
+  color: #d7d7d7;
+}
+/* line 142, ../styles/scss/_settings.scss */
+.settings-page .affi-list li .company-name {
+  padding: 5.5px 60px;
+  font-family: "OpenSans-Light";
+  font-size: 20px;
+}
+/* line 148, ../styles/scss/_settings.scss */
+.settings-page .affi-list li .actions {
+  position: absolute;
+  right: 0;
+  bottom: 5.5px;
+}
+/* line 154, ../styles/scss/_settings.scss */
+.settings-page .affi-list li .check,
+.settings-page .affi-list li .close-icon {
+  margin-left: 20px;
+  display: none;
+}
+/* line 161, ../styles/scss/_settings.scss */
+.settings-page .affi-list li.affiliated .save {
+  display: none;
+}
+/* line 165, ../styles/scss/_settings.scss */
+.settings-page .affi-list li.affiliated .check,
+.settings-page .affi-list li.affiliated .close-icon {
+  display: inline-block;
+}
+/* line 173, ../styles/scss/_settings.scss */
+.settings-page .invite-wrapper {
+  padding-top: 60px;
+}
+/* line 176, ../styles/scss/_settings.scss */
+.settings-page .invite-wrapper h4 {
+  margin-bottom: 40px;
+  font-size: 20px;
+}
+/* line 181, ../styles/scss/_settings.scss */
+.settings-page .invite-wrapper .departments-area {
+  background-color: #202020;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  width: 50%;
+  display: inline-block;
+}
+/* line 187, ../styles/scss/_settings.scss */
+.settings-page .invite-wrapper .departments-area.special-list {
+  background-color: #313131;
+}
+/* line 191, ../styles/scss/_settings.scss */
+.settings-page .invite-wrapper .departments-area .title {
+  padding: 33px 30px;
+}
+/* line 194, ../styles/scss/_settings.scss */
+.settings-page .invite-wrapper .departments-area .title span {
+  font-family: "OpenSans";
+  font-size: 16px;
+  color: #ffffff;
+}
+/* line 199, ../styles/scss/_settings.scss */
+.settings-page .invite-wrapper .departments-area .title span.locked, .settings-page .invite-wrapper .departments-area .title span.unlocked {
+  font-size: 14px;
+}
+/* line 204, ../styles/scss/_settings.scss */
+.settings-page .invite-wrapper .departments-area .title span.locked {
+  color: #a4a4a4;
+}
+/* line 210, ../styles/scss/_settings.scss */
+.settings-page .invite-wrapper .departments-area .content {
+  padding: 15px 0;
+  height: 400px;
+  position: relative;
+}
+/* line 216, ../styles/scss/_settings.scss */
+.settings-page .invite-wrapper .departments-area .divider {
+  background-color: #545454;
+}
+/* line 222, ../styles/scss/_settings.scss */
+.settings-page .departments li,
+.settings-page .specialists li {
+  padding: 15px 30px;
+  font-family: "OpenSans-Light";
+  font-size: 16px;
+  color: #ffffff;
+  cursor: pointer;
+}
+/* line 233, ../styles/scss/_settings.scss */
+.settings-page .departments li:hover, .settings-page .departments li.active {
+  background-color: #313131;
+}
+/* line 237, ../styles/scss/_settings.scss */
+.settings-page .departments li .close-icon {
+  margin-top: 5px;
+}
+/* line 245, ../styles/scss/_settings.scss */
+.settings-page .specialists li:hover {
+  background-color: #202020;
+}
+/* line 249, ../styles/scss/_settings.scss */
+.settings-page .specialists li .user-avatar {
+  width: 40px;
+  height: 40px;
+}
+/* line 254, ../styles/scss/_settings.scss */
+.settings-page .specialists li .user-name {
+  margin-bottom: 0;
+  padding-top: 0;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 1.4;
+}
+/* line 262, ../styles/scss/_settings.scss */
+.settings-page .specialists li .close-icon {
+  margin-top: 12px;
+}
+/* line 268, ../styles/scss/_settings.scss */
+.settings-page .tokenizer-wrapper {
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border: solid 1px #d8d8d8;
+  width: 100%;
+}
+/* line 273, ../styles/scss/_settings.scss */
+.settings-page .tokenizer-wrapper > .tokens {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+}
+/* line 278, ../styles/scss/_settings.scss */
+.settings-page .tokenizer-wrapper > .tokens li {
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  background-color: #479ae0;
+  padding: 5px 10px;
+  margin: 4px;
+  display: inline-block;
+}
+/* line 285, ../styles/scss/_settings.scss */
+.settings-page .tokenizer-wrapper > .tokens li .token-content {
+  font-family: "OpenSans";
+  font-size: 16px;
+  color: #ffffff;
+  margin-right: 10px;
+}
+/* line 292, ../styles/scss/_settings.scss */
+.settings-page .tokenizer-wrapper > .tokens li .close-icon {
+  cursor: pointer;
+}
+
+/* line 15, ../styles/main.scss */
+body {
+  background-color: #ffffff;
+  color: #000000;
+  font-family: "OpenSans-Light";
+  font-size: 16px;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* line 24, ../styles/main.scss */
+h1, h2, h3, h4, h5, p {
+  margin: 0;
+}
+
+/* line 28, ../styles/main.scss */
+h1 {
+  font-size: 54px;
+  line-height: 1.1;
+}
+
+/* line 33, ../styles/main.scss */
+h2 {
+  font-size: 40px;
+  line-height: 1.3;
+}
+
+/* line 38, ../styles/main.scss */
+h3 {
+  font-size: 26px;
+  line-height: 1;
+}
+
+/* line 43, ../styles/main.scss */
+h4 {
+  font-size: 20px;
+  line-height: 1;
+}
+
+/* line 48, ../styles/main.scss */
+h5 {
+  font-size: 16px;
+  line-height: 1;
+}
+
+/* line 53, ../styles/main.scss */
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 59, ../styles/main.scss */
+a {
+  color: #3a93de;
+}
+
+/* line 63, ../styles/main.scss */
+a:hover, a:active, a:focus {
+  text-decoration: none;
+}
+
+/* line 67, ../styles/main.scss */
+input,
+textarea {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  box-shadow: none;
+  padding: 5.5px 0;
+}
+
+/*# sourceMappingURL=main.css.map */

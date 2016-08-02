@@ -1,0 +1,23 @@
+<div class="modal-header">
+	<span class="close-icon large-gray pull-right cursor-pointer" ng-click="cancel()" title="Close"></span>
+	<h4 class="modal-title">Sign in your account or create company account</h4>
+</div>
+<div class="modal-body">
+	<form class="signin-modal-form" name="signInForm">
+		<h3>Sign in</h3>
+		<div class="form-group">
+			<label>Enter a company name</label>
+			<input type="text" class="form-control" placeholder="Company Name" ng-model="signinCompanyName" required />
+		</div>
+		<button class="btn btn-success btn-lg btn-block" ng-click="signinNext()">NEXT</button>
+	</form>
+	<div class="divider"></div>
+	<form class="signup-modal-form" name="signUpForm">
+		<h3>Create your company</h3>
+		<div class="form-group">
+			<label>Enter a company name</label>
+			<input type="text" class="form-control" placeholder="Company Name" ng-model="signupCompanyName" required />
+		</div>
+		<button class="btn btn-info btn-lg btn-block" ng-click="signupNext()">NEXT</button>		
+	</form>
+</div>

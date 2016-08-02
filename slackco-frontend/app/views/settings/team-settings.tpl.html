@@ -1,0 +1,78 @@
+<div class="row">
+	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 left-content">		
+		<ul class="settings-sub-tabs">
+			<li ng-class="{'active': selSubTab=='account-mng'}"><a ng-href="/#/settings?main=team&sub=account-mng">Account Management</a></li>
+		</ul>
+		<button class="btn btn-success" ng-click="updateSettings('team')">Update Settings</button>	
+	</div>
+	<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+		<div ng-show="selSubTab=='account-mng'">
+			<form class="settings-form" name="$parent.teamForm">
+				<h3 class="settings-title">Here you can invite new members who can create conversations with other companies.</h3>
+				<div class="row">					
+					<div class="col-md-6">
+						<input type="email" class="form-control" placeholder="Send an invite by email address" ng-model="newMember.email" required />
+					</div>
+					<div class="col-md-6">
+						<div class="tokenizer-wrapper">
+							<ul class="tokens">
+								<li>
+									<span class="token-content">{{newMember.department}}</span>
+									<span class="close-icon thin-white"></span>
+								</li>
+							</ul>
+						</div>
+					</div>				
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="invite-wrapper">
+							<h4>People who has been already invited</h4>
+							<div class="departments-area pull-left">
+								<div class="title clearfix">
+									<span class="pull-left">Departments</span>
+									<span class="pull-right unlocked">Unlocked</span>
+								</div>
+								<div class="divider"></div>
+								<div class="content" ng-nicescroll nice-option="{zindex: 999, autohidemode: true, cursorcolor: '#636363', cursorwidth: '7px', cursorborder: 'none', cursorborderradius: '7px'}">
+									<ul class="departments">
+										<li ng-click="filterMember('All')" ng-class="{'active': filteredDepart=='All'}">
+											<span class="depart-name">All</span>
+											<span class="close-icon thin-white pull-right"></span>
+										</li>
+										<li ng-repeat="depart in departList track by $index" ng-click="filterMember(depart.name)" ng-class="{'active': filteredDepart==depart.name}">
+											<span class="depart-name">{{depart.name}}</span>
+											<span class="close-icon thin-white pull-right"></span>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="departments-area special-list pull-left">
+								<div class="title clearfix">
+									<span class="pull-left">Specialists</span>
+									<span class="pull-right locked">Locked</span>
+								</div>
+								<div class="divider"></div>
+								<div class="content" ng-nicescroll nice-option="{zindex: 999, autohidemode: true, cursorcolor: '#636363', cursorwidth: '7px', cursorborder: 'none', cursorborderradius: '7px'}">
+									<ul class="specialists">
+										<li ng-repeat="member in filteredMembers track by $index">
+											<div class="user-info">
+												<img class="user-avatar" ng-src="{{member.avatar || 'assets/images/no-avatar.png'}}" />
+												<div class="user-data">
+													<p class="user-name" ng-show="member.first_name!=null && member.first_name!=''">{{member.first_name}} {{member.last_name}}</p>
+													<p class="user-name" ng-hide="member.first_name!=null && member.first_name!=''">{{member.email}}</p>
+													<p class="user-level">{{member.role}}</p>
+												</div>
+												<span class="close-icon thin-gray pull-right"></span>
+											</div>								
+										</li>							
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

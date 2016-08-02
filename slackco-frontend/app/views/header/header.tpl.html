@@ -1,0 +1,52 @@
+<nav class="navbar navbar-custom" ng-class="{'gray-bg': hasMenuBG}">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" ng-init="navCollapsed=true" ng-click="navCollapsed=!navCollapsed">
+                <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand page-scroll" ng-href="/#/" ng-hide="isAuthorized">
+                Logo
+            </a>
+            <a class="navbar-brand page-scroll" ng-href="/#/home/" ng-show="isAuthorized">
+                Logo
+            </a>
+        </div>
+
+        <div class="collapse navbar-collapse navbar-right navbar-main-collapse" uib-collapse="navCollapsed">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a class="page-scroll" ng-href="/#/companies">Discover Companies</a>
+                </li>
+                <li ng-hide="isAuthorized">
+                    <a class="page-scroll btn-signin" ng-click="signin()">Sign In</a>
+                </li>
+                <li ng-show="isAuthorized">
+                    <a>
+                        <img src="assets/images/comment-icon.png">
+                    </a>
+                </li>
+                <li ng-show="isAuthorized">
+                    <a>
+                        <img src="assets/images/ring-icon.png">
+                    </a>
+                </li>
+                <li ng-show="isAuthorized" uib-dropdown on-toggle="toggled(open)">
+                    <div class="user-info" uib-dropdown-toggle>
+                        <div class="user-data">
+                            <h3 class="user-name">{{globals.currentUser.profile.first_name}} {{globals.currentUser.profile.last_name}}</h3>
+                            <span class="user-level"><span class="user-role">{{globals.currentUser.profile.role}}</span> in {{globals.currentUser.company}}</span>
+                        </div>
+                        <img class="user-avatar" src="assets/images/no-avatar.png">
+                    </div>
+                    <ul class="dropdown-menu dropdown-custom-menu" uib-dropdown-menu aria-labelledby="simple-dropdown">
+                        <li role="menuitem"><a ng-href="/#/home">{{globals.currentUser.company}}</a></li>
+                        <li role="menuitem"><a ng-href="/#/settings">Settings</a></li>
+                        <li role="menuitem"><a ng-click="signout()">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>

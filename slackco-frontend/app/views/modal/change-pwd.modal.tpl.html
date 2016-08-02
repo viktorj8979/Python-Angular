@@ -1,0 +1,16 @@
+<div class="modal-header">
+	<span class="close-icon large-gray pull-right cursor-pointer" ng-click="cancel()" title="Close"></span>
+	<a ng-click="back()">To the previous screen</a>
+</div>
+<div class="modal-body">
+	<form name="changePwdForm">
+		<h3>Set your new password</h3>
+		<div class="form-group">
+			<input type="password" class="form-control" placeholder="New password" ng-model="pwd" minlength="8" required />
+		</div>
+		<div class="form-group">
+			<input type="password" class="form-control" placeholder="Confirm password" ng-model="confirmPwd" minlength="8" required />
+		</div>
+		<button class="btn btn-success btn-lg btn-block" ng-click="changePwd()">CHANGE PASSWORD</button>
+	</form>	
+</div>

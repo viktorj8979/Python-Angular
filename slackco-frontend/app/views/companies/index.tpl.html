@@ -1,0 +1,107 @@
+<div class="company-page">
+	<section class="top-container">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Start typing a company’s name, a website or an email" ng-model="searchKey" ng-change="filter()">
+					</div>
+					<div class="industry-tokens-content">
+						<ul class="industry-tokens">
+							<!--
+							<li ng-show="allFiltered">
+								<span class="content">All</span>
+								<span ng-click="deleteAllFilters()" class="close-icon thin-white cursor-pointer"></span>
+							</li>
+							-->
+							<li ng-repeat="item in filters">
+								<span class="content">{{item.name}}</span>
+								<span ng-click="deleteFilter(item)" class="close-icon thin-white cursor-pointer"></span>
+							</li>
+						</ul>
+					</div>					
+				</div>
+				<div class="col-md-6">
+					<div class="dropdown-wrapper">
+						<div class="dropdown-custom searchByIndustry" ng-class="{'open': isSearchDropdownOpened}">
+							<div class="title" ng-click="toggleSearchDropdown()">Search by industry</div>
+							<div class="content">
+								<div class="industry-list" ng-nicescroll nice-option="{zindex: 999, autohidemode: true, cursorcolor: '#595959', cursorwidth: '7px', cursorborder: 'none', cursorborderradius: '7px'}">
+									<div class="item" ng-click="selectAllItem()" ng-class="{'filtered': allFiltered}">All</div>
+									<div class="item" ng-repeat="item in industryList" ng-click="selectItem(item)" ng-class="{'filtered': item.filtered || allFiltered}">{{item.name}}</div>
+								</div>
+								<div class="button-area clearfix">
+									<a ng-click="selectAllItem()">Reset Filter</a>
+									<a ng-click="applyFilter()">Apply Filter</a>
+								</div>
+							</div>							
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="map-wrapper">
+						<a class="on-map" ng-click="toggleOnMap()">On Map<span class=""></span></a>
+						<div id="map" class="map-content" ng-show="isOnMap">
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>	
+	</section>
+	<section class="main-container">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p class="search-count">{{filteredCompanyList.length}} Companies Searched</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6" ng-repeat="company in filteredCompanyList track by $index">
+					<div class="company-item" back-img="{{company.cover}}" ng-click="visitCompany(company.id)">
+						<div class="title clearfix">
+							<div class="pull-left">
+								<img class="company-avatar" src="" />
+								<h3 class="company-name">{{company.name}}</h3>
+							</div>
+							<div class="pull-right">
+								<button class="btn btn-info send-request" ng-click="inviteFriend(company.id, $event)">Send a Friend Request</button>
+							</div>
+						</div>
+						<div class="content">
+							<ul class="info-list clearfix">
+								<li>
+									<p class="info-title">Website</p>
+									<span class="info-desc">{{company.website}}</span>
+								</li>
+								<li>
+									<p class="info-title">Industry</p>
+									<span class="info-desc">{{company.industry}}</span>
+								</li>
+								<li>
+									<p class="info-title">Type</p>
+									<span class="info-desc">{{company.company_type}}</span>
+								</li>
+								<li>
+									<p class="info-title">Company Size</p>
+									<span class="info-desc">{{company.company_size}} employees</span>
+								</li>
+								<li>
+									<p class="info-title">Headquarters</p>
+									<span class="info-desc">{{company.city}} {{company.state}} {{company.country}}</span>
+								</li>
+								<li>
+									<p class="info-title">Founded</p>
+									<span class="info-desc">{{company.founded}}</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>				
+			</div>
+		</div>
+	</section>
+	
+</div>

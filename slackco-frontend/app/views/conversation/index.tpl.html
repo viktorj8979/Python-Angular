@@ -1,0 +1,63 @@
+<div class="conv-page">
+    <div class="container-fluid">
+        <div class="top-container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="wrapper gray-bg">
+                        <h3>You are in {{rooms.length}} conversations</h3>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="wrapper">
+                        <div ng-switch on="selection">
+                            <div ng-switch-when="list">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <ul class="view-mode">
+                                            <li class="selected"><a>SEE ALL</a></li>
+                                            <li><a>CONFIRMED</a></li>
+                                            <li><a>UNCONFIRMED</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <input type="text" class="form-control typing-text" placeholder="Start typyng a conversation’s name or the word">
+                                    </div>
+                                </div>
+                            </div>
+                            <div ng-switch-when="detail">
+                                <div ng-include="'views/conversation/conv-room-member-list.tpl.html'"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-container">
+            <div class="row">
+                <div class="col-md-4 gray-bg">
+                    <div ng-include="'views/conversation/conv-company-list.tpl.html'"></div>
+                    <div class="footer gray-bg">
+                        <ul>
+                            <li><a href="">ABOUT</a></li>
+                            <li><a href="">TEAM</a></li>
+                            <li><a href="">CONTACT</a></li>
+                            <li><a href="">DISCOVER COMPANIES</a></li>
+                            <li><a href="">HOW IT WORKS</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <!-- <div ng-include="'views/conversation/conv-list.tpl.html'"></div> -->
+                    <div ng-switch on="selection">
+                        <div ng-switch-when="list">
+                            <div ng-include="'views/conversation/conv-list.tpl.html'"></div>
+                        </div>
+                        <div ng-switch-when="detail">
+                            <div ng-include="'views/conversation/conv-detail.tpl.html'"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,44 @@
+<div class="modal-header create-conv-modal-header">
+	<span class="close-icon large-gray pull-right cursor-pointer" ng-click="cancel()" title="Close"></span>
+	<h4>Fill out the request to the conversation</h4>
+</div>
+<div class="modal-body create-conv-modal-body">
+	<form class="create-conv-form">
+		<div class="form-group">
+			<label>Subject</label>
+			<input type="text" ng-model="subject" class="form-control is-border input-sm conv-subject" placeholder="Typing your subject" />
+		</div>
+		<div class="form-group">
+			<label>Description</label>
+			<textarea ng-model="description" class="form-control is-border input-sm conv-desc" placeholder="Typing your friend reques description"></textarea>
+		</div>
+		<div class="drag-drop-content">
+			CLICK OR DRAG’N’DROP<br />TO ADD FILES
+		</div>
+		<ul class="uploaded-file-list">
+			<li class="clearfix">
+				<span class="pull-left file-name">Readme.doc</span>
+				<div class="pull-right actions">
+					<a class="check"></a>
+					<a class="close-icon thin-gray margin-left-30"></a>
+				</div>
+			</li>
+			<li class="clearfix">
+				<span class="pull-left file-name">Presentation.mov</span>
+				<div class="pull-right actions">
+					<span class="loading-text">LOADING 89%</span>
+					<a class="close-icon thin-gray margin-left-30"></a>
+				</div>
+			</li>	
+		</ul>
+		<div class="form-group">
+			<input type="url" class="form-control" placeholder="URL">
+		</div>
+		<div class="form-group">
+			<input type="url" class="form-control" placeholder="Add a Link">
+		</div>
+	</form>	
+</div>
+<div class="modal-footer create-conv-modal-footer">
+	<button class="btn btn-success btn-block" ng-click="createConversation()">SEND A REQUEST TO THE CONVERSATION</button>
+</div>

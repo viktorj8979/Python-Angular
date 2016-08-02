@@ -1,0 +1,93 @@
+#footer {
+ 	width: 100%;
+ 	padding: 56px 0 97px;
+ 	background-color: $color__dark_blue;
+
+ 	.logo {
+ 		font-family: OpenSans-Bold;
+	  	font-size: 30px;
+	  	color: $color__white;
+	    display: inline-block;
+	    line-height: 55px;
+	    height: 55px;
+	    width: 100%;
+	    text-align: center; 
+
+	    @media (min-width: 768px) {
+	    	text-align: left;
+	    }
+ 	}
+
+ 	.bottom-menu {
+	 	text-align: center;
+
+	 	li {
+		 	display: inline-block;
+		 	padding: 0 18px;
+		 	width: 100%;
+
+		 	@media (min-width: 768px) {
+		 		width: auto;
+		 	}
+
+		 	a {
+			 	font-family: "OpenSans-Semibold";
+			 	font-size: 12px;
+			 	color: $color__white;
+			 	line-height: 55px;
+			}
+		}
+	}
+
+	.social-links {
+		text-align: center;
+		padding-top: 6px;
+
+		@media (min-width: 768px) {
+	 		text-align: right;
+	 	}
+
+		a {
+			display: inline-block;
+			width: 40px;
+			height: 40px;
+			border: solid 1px $color__gray53;
+			@include border-radius(50%);
+			text-align: center;
+			color: $color__white;	
+			line-height: 38px;
+			margin-left: 10px;
+			font-size: 16px;
+		}
+	}
+
+	.copyright {
+		margin-top: 20px;
+
+		@media (min-width: 768px) {
+	 		margin-top: 101px;
+	 	}
+
+		p {
+			font-family: "OpenSans";
+			font-size: 14px;
+			color: $color__grayc5;
+			line-height: 1.5;
+			text-align: center;
+
+			@media (min-width: 768px) {
+		 		text-align: left;
+		 	}
+
+			&.company-reserved {
+				text-align: center;
+				margin-top: 10px;
+
+				@media (min-width: 768px) {
+			 		text-align: right;
+					margin: 0;
+			 	}
+			}
+		}
+	}
+}

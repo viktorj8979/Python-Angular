@@ -1,0 +1,26 @@
+<div class="modal-header">
+	<span class="close-icon large-gray pull-right cursor-pointer" ng-click="cancel()" title="Close"></span>
+	<a ng-click="back()">Sign in to a different company</a>
+</div>
+<div class="modal-body">
+	<form>
+		<h3>Create a company</h3>
+		<div class="form-group">
+			<input type="text" class="form-control" placeholder="First Name" ng-model="firstName" />
+		</div>
+		<div class="form-group">
+			<input type="text" class="form-control" placeholder="Last name" ng-model="lastName" />
+		</div>		
+	</form>	
+	<div class="divider"></div>
+	<form name="registerForm">
+		<h3>Set your password</h3>
+		<div class="form-group">			
+			<input type="password" class="form-control" placeholder="Password" ng-model="pwd" />
+		</div>
+		<div class="form-group">
+			<input type="password" class="form-control" placeholder="Confirm password" ng-model="confirmPwd" />
+		</div>		
+		<button class="btn btn-success btn-lg btn-block" ng-click="createCompany()">CREATE COMPANY</button>
+	</form>	
+</div>

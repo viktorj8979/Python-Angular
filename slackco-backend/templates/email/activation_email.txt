@@ -1,0 +1,9 @@
+<html>
+<body>
+	<p>Hello and thank you for registering to <b>Slackco</b>. The next step is to activate your account. Please click the following link and you're on your way!</p><br/>
+
+	<p><a href="{{ activation_link }}">Activation Link</a></p><br/>
+
+	<p>Please feel free to reach out to us any questions you may have by replying to this email.</p><br/>
+</body>
+</html>

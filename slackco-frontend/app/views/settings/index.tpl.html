@@ -1,0 +1,23 @@
+<div class="settings-page">
+	<div class="container">
+		<div class="top-container">
+			<div class="row">
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">		
+					<h1>Settings</h1>
+				</div>
+				<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+					<ul class="settings-main-tabs">
+					    <li ng-class="{'active': selMainTab=='personal'}"><a ng-href="/#/settings?main=personal&sub=personal-profile">Personal Settings</a></li>
+					    <li ng-class="{'active': selMainTab=='company'}"><a ng-href="/#/settings?main=company&sub=basic-info">Company Settings</a></li>
+					    <li ng-class="{'active': selMainTab=='team'}"><a ng-href="/#/settings?main=team&sub=account-mng">Manage Company Team</a></li>
+				  	</ul>
+				</div>
+			</div>
+		</div>
+		<div class="main-container">
+			<div ng-include="'views/settings/personal-settings.tpl.html'" ng-show="selMainTab=='personal'"></div>
+			<div ng-include="'views/settings/company-settings.tpl.html'" ng-show="selMainTab=='company'"></div>
+			<div ng-include="'views/settings/team-settings.tpl.html'" ng-show="selMainTab=='team'"></div>
+		</div>
+	</div>
+</div>

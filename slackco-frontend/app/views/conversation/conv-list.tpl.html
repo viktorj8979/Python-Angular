@@ -1,0 +1,66 @@
+<ul class="conv-list">
+    <li class="wrapper" ng-repeat="room in rooms">
+        <div class="wrapper gray-bg mng-conv-wrapper" ng-hide="room.confirmed">
+            <h3 ng-hide="room.confirmed">The conversation is not started. {{ room.target.name }} not confirmed the application yet. <a>Manage this conversation</a></h3>
+        </div>
+        <div class="conv-wrapper gray-bg" ng-if="room.confirmed" ng-click="enterRoom(room.id)">
+            <img class="user-avatar" />
+            <div class="chat-content">
+                <h3 class="user-name">{{room.messages[room.messages.length-1].handle.first_name}} {{room.messages[room.messages.length-1].handle.last_name}}</h3>
+                <p class="chat-data">{{room.messages[room.messages.length-1].message}}</p>
+                <!-- <div ng-switch on="room.messages[room.messages.length-1].message.type">
+                    <div ng-switch-when="file">
+                        <a href="{{room.messages[room.messages.length-1].message.message}}" target="_blank">{{getFileName(room.messages[room.messages.length-1].message.message)}}</a>
+                        file here 
+                    </div>
+                    <div ng-switch-when="text">
+                        {{ message.message }}
+                    </div>
+                </div> -->
+                <p class="chat-time">{{getFormattedTime(room.messages[room.messages.length-1].timestamp)}}</p>
+            </div>
+        </div>
+    </li>
+    <!-- 
+    <li class="wrapper">
+		<div class="conv-wrapper gray-bg">
+			<img class="user-avatar" />
+			<div class="chat-content">
+				<h3 class="user-name">Alex Aron</h3>
+				<p class="chat-data">Finally you can do design work online, the way it should have been all along.</p>
+				<p class="chat-time">Today at 03:39 am</p>
+			</div>
+		</div>
+	</li>
+	<li class="wrapper">
+		<div class="conv-wrapper gray-bg">
+			<img class="user-avatar" />
+			<div class="chat-content">
+				<h3 class="user-name">Alex Aron</h3>
+				<p class="chat-data">Finally you can do design work online, the way it should have been all along.</p>
+				<p class="chat-time">Today at 03:39 am</p>
+			</div>
+		</div>
+	</li>
+	<li class="wrapper">
+		<div class="conv-wrapper gray-bg">
+			<img class="user-avatar" />
+			<div class="chat-content">
+				<h3 class="user-name">Andre Boti</h3>
+				<p class="chat-data">Go to this link;)</p>
+				<a>Link</a>
+				<p class="chat-time">Today at 03:39 am</p>
+			</div>
+		</div>
+	</li>
+	<li class="wrapper">
+		<div class="conv-wrapper gray-bg">
+			<img class="user-avatar" />
+			<div class="chat-content">
+				<h3 class="user-name">Alex Aron</h3>
+				<p class="chat-data">Finally you can do design work online, the way it should have been all along.</p>
+				<p class="chat-time">Today at 03:39 am</p>
+			</div>
+		</div>
+	</li> -->
+</ul>

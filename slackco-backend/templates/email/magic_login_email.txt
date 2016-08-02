@@ -1,0 +1,9 @@
+<html>
+<body>
+	<p>Hello and thank you for using <b>Slackco</b>. Please click the following link to login</p><br/>
+
+	<p><a href="{{ magic_link }}">Sign In</a></p><br/>
+
+	<p>Please feel free to reach out to us any questions you may have by replying to this email.</p><br/>
+</body>
+</html>

@@ -1,0 +1,298 @@
+.settings-page {
+	padding-bottom: 80px;
+
+	.top-container {
+		padding-top: 60px;
+
+		h1 {
+			font-family: "OpenSans-Light";
+			font-size: 50px;
+			text-align: left;
+		}
+	}
+
+	.left-content {
+		padding-right: 110px;
+	}
+
+	.settings-main-tabs {
+		text-align: left;
+		border-bottom: solid 1px $color__grayed;
+
+		li {
+			display: inline-block;
+			width: 32%;
+
+			a {
+				font-family: "OpenSans-Light";
+				font-size: 22px;
+				color: $color__black;
+				padding: 30px 0;
+			    display: inline-block;
+			    cursor: pointer;
+			}
+
+			&.active a {
+				border-bottom: solid 1px $color__blue;
+			}
+		}
+	}
+
+	.settings-sub-tabs {
+		text-align: left;
+		margin-bottom: 100px;
+
+		li {
+			display: block;
+			padding: 20px;
+			cursor: pointer;
+
+			a {
+				font-family: "OpenSans";
+				font-size: 16px;
+				color: $color__black;
+				display: block;
+			}
+
+			&.active {
+				@include border-radius(3px);
+				background-color: $color__blue;
+
+				a {
+					color: $color__white;
+				}
+			}
+		}
+	}
+
+	.main-container {
+		padding-top: 105px;
+	}
+
+	.settings-form {
+		.form-group {
+			margin-bottom: 35px;
+		}
+
+		h3.settings-title {
+			font-family: "OpenSans-Light";
+			font-size: 22px;
+			color: $color__black;
+			margin-bottom: 40px;
+			line-height: 1.5;
+		}
+	}
+
+	.socials-settings {
+		li {
+			border-bottom: solid 1px $color__border_gray; 
+		    position: relative;
+		    margin-bottom: 40px;
+
+		    .social-icon {
+			    position: absolute;
+			    width: 25px;
+			    left: 0;
+			    bottom: 5.5px;
+			    text-align: center;
+			    font-size: 20px;
+			    line-height: 1;
+			    color: $color__grayd7;
+			}
+
+			input.form-control {
+				border: none;
+				padding: 5.5px 60px; 
+			}
+
+			input.url {
+				padding: 5.5px 60px 5.5px 0;
+			}
+
+			.social-actions {
+				position: absolute;
+				right: 0;
+				bottom: 5.5px;
+			}
+
+			.check,
+			.close-icon {
+				margin-left: 20px;
+			}
+	    }
+	}
+
+	.affi-list {
+		li {
+			border-bottom: solid 1px $color__border_gray; 
+		    position: relative;
+		    margin-bottom: 40px;
+
+		    .company-icon {
+			    position: absolute;
+			    width: 25px;
+			    left: 0;
+			    bottom: 5.5px;
+			    text-align: center;
+			    font-size: 20px;
+			    line-height: 1;
+			    color: $color__grayd7;
+			}
+
+			.company-name {
+				padding: 5.5px 60px;
+				font-family: "OpenSans-Light";
+				font-size: 20px;
+			}
+
+			.actions {
+				position: absolute;
+				right: 0;
+				bottom: 5.5px;
+			}
+
+			.check,
+			.close-icon {				
+				margin-left: 20px;
+				display: none;
+			}
+
+			&.affiliated {
+				.save {
+					display: none;
+				}
+
+				.check,
+				.close-icon {
+					display: inline-block;
+				}
+			}
+	    }
+	}
+
+	.invite-wrapper {
+		padding-top: 60px;
+
+		h4 {
+			margin-bottom: 40px;
+			font-size: 20px;	
+		}
+
+		.departments-area {
+			background-color: $color__dark_blue;
+			@include border-radius(3px);
+			width: 50%;	
+			display: inline-block;
+
+			&.special-list {
+				background-color: $color__dark_gray;
+			}
+
+			.title {
+				padding: 33px 30px;
+
+				span {
+					font-family: "OpenSans";
+					font-size: 16px;
+					color: $color__white;
+
+					&.locked,
+					&.unlocked {
+						font-size: 14px;
+					}
+
+					&.locked {
+						color: $color__purple;
+					}
+				}
+			}
+
+			.content {
+				padding: 15px 0;
+				height: 400px;
+				position: relative;
+			}
+
+			.divider {
+				background-color: $color__gray54;
+			}
+		}
+	}	
+
+	.departments li,
+	.specialists li {
+		padding: 15px 30px;
+		font-family: "OpenSans-Light";
+		font-size: 16px;
+		color: $color__white;
+		cursor: pointer;
+	}
+
+	.departments {
+		li {
+			&:hover, &.active {
+				background-color: $color__dark_gray;
+			}
+
+			.close-icon {
+				margin-top: 5px;
+			}
+		}
+	}
+
+	.specialists {
+		li {
+			&:hover {
+				background-color: $color__dark_blue;
+			}
+
+			.user-avatar {
+				width: 40px;
+				height: 40px;
+			}
+
+			.user-name {
+				margin-bottom: 0;
+				padding-top: 0;
+				color: $color__white;
+				font-size: 16px;
+				line-height: 1.4;
+			}
+
+			.close-icon {
+				margin-top: 12px;
+			}
+		}
+	}
+
+	.tokenizer-wrapper {
+		@include border-radius(3px);
+		border: solid 1px $color__border_gray;
+		width: 100%;	
+
+		&  > .tokens {
+			display: inline-block;
+			vertical-align: middle;
+			width: 100%;
+
+			li {
+				@include border-radius(3px);
+				background-color: $color__blue;
+				padding: 5px 10px;
+				margin: 4px;
+				display: inline-block;
+
+				.token-content {
+					font-family: "OpenSans";
+					font-size: 16px;
+					color: $color__white;
+					margin-right: 10px;
+				}
+
+				.close-icon {
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}

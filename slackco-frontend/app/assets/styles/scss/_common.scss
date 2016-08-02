@@ -1,0 +1,291 @@
+.divider {
+	width: 100%;
+	height: 1px;
+	background-color: $color__light_gray;
+	display: block;
+}
+
+.page-title {
+	color: $color__gray;
+	font-family: "OpenSans";
+}
+
+.top-container {
+	width: 100%;
+	text-align: center;
+	@include background-size(cover);
+
+	.company-logo {
+		display: inline-block;
+		width: 100px;
+		height: 100px;
+		margin-bottom: 10px;
+		background: -webkit-linear-gradient(left, #79eeb5, #85c8ff); /* For Safari 5.1 to 6.0 */
+	  	background: -o-linear-gradient(left, #79eeb5, #85c8ff); /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient(left, #79eeb5, #85c8ff); /* For Firefox 3.6 to 15 */
+		background: linear-gradient(to left, #79eeb5, #85c8ff);
+		position: relative;
+
+		img {
+			width: 100%;
+			height: 100%;
+			@include border-radius(100%);
+		}
+
+		> .edit-icon {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin-left: -8px;
+			margin-top: -8px;
+		}
+	}
+
+	.company-name {
+		color: $color__white;
+		font-size: 40px;
+		line-height: 1.4;
+	}
+
+	.social-list {
+		margin-bottom: 50px;
+
+		li {
+			display: inline-block;
+			margin-right: 10px;
+			width: 50px;
+			height: 50px;
+		    background-color: rgba(255,255,255,0.15);
+		    @include border-radius(50%);
+			vertical-align: middle;
+
+			&.no-bg {
+				background: transparent;
+				margin-right: 0;
+			}
+
+			&.add-socials {
+				background: transparent;
+				width: auto;
+				line-height: 50px;
+				color: $color__white;
+				font-family: "OpenSans";
+				font-size: 20px;
+			}
+
+			& > a {
+			    line-height: 50px;
+			    color: $color__white;
+			    opacity: 0.5;
+			    font-size: 22px;
+
+			    &.edit-icon {
+					opacity: 1;
+					margin-top: 16px;
+				}
+			}
+		}	
+	}
+
+	.btn {
+		margin: 0 15px;
+	}
+
+	.edit-cover {
+		text-align: left;
+	    display: block;	    
+	    font-family: "OpenSans";
+	    font-size: 16px;
+	    color: #ffffff;
+	    opacity: 0.7;
+	    cursor: pointer;
+	    margin-top: -25px;
+
+	    .edit-cover-icon {
+	    	margin-right: 5px;	    	
+	    }
+
+	    .edit-cover-text {
+	    	line-height: 22px;
+	    	vertical-align: top;
+	    }
+	}
+}
+
+.company-logo {
+	width: 68px;
+	height: 68px;
+	@include border-radius(50%);
+}
+
+.company-name {
+	font-family: "OpenSans";
+	font-size: 18px;
+	color: $color__black;
+}
+
+.company-role, .company-desc {
+	font-family: "OpenSans";
+	font-size: 12px;
+	color: $color__gray;
+}
+
+.company-info {
+	.company-logo {
+		margin-right: 15px;    
+	    display: inline-block;
+	    vertical-align: middle;
+	}	
+
+	.company-data {
+		display: inline-block;
+	    vertical-align: middle;
+	}
+
+	.company-name {
+		margin-bottom: 2px;
+	}
+}
+
+.user-avatar {
+	width: 60px;
+	height: 60px;
+	@include border-radius(50%);
+	display: inline-block;
+}
+
+.user-name {
+	font-family: OpenSans;
+  	font-size: 18px;
+  	color: $color__black;
+}
+
+.user-level {
+	font-family: OpenSans;
+  	font-size: 12px;
+  	color: $color__gray;
+}
+
+.user-info {
+	width: 100%;	
+
+	.user-avatar {
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 15px;
+	}
+
+	.user-data {
+		display: inline-block;
+		vertical-align: middle;		
+	}
+
+	.user-name {
+		margin-bottom: 2px;	
+	    line-height: 1;
+	}
+}
+
+.is-border {
+	border: 1px solid $color__border_gray !important;
+}
+
+.dropdown-wrapper {
+	position: relative;
+	width: 100%;		
+}
+
+.dropdown-custom {
+	width: 100%;
+	cursor: pointer;	
+
+	&:after {
+		content: "";
+		position: absolute;
+		right: 0;
+		top: 50%;
+		display: block;
+		width: 16px;
+		height: 9px;
+		margin-top: -4px;	
+		background: url("../images/dropdown-icon-gray.png") no-repeat scroll 0 0 transparent;
+		opacity: 0.5;
+	}
+
+	&.white {
+		&:after {
+			background: url("../images/dropdown-icon-white.png") no-repeat scroll 0 0 transparent;
+			opacity: 1;
+		}
+
+		.title {
+			color: $color__white;
+		}
+	}
+
+	.title {
+		font-family: "OpenSans-Light";
+		font-size: 20px;
+		color: $color__gray;	
+		padding: 5.5px 0;
+		border-bottom: solid 1px $color__border_gray;
+		line-height: 1;	
+
+		&.has-data {
+			color: $color__black;
+		}
+	}
+
+	.content {
+		width: 100%;
+		height: 380px;
+		margin-bottom: 14px;
+		overflow-y: auto;
+		outline: none;
+		display: none;
+		background-color: $color__dark_blue;
+		@include border-radius(3px);
+		padding: 10px 0;
+	}
+
+	&.open .content {
+		display: block;
+		z-index: 99;
+		position: absolute;	
+	}
+
+	.item {
+		font-family: "OpenSans-Light";
+		font-size: 16px;
+		color: $color__white;
+		padding: 10px 20px;
+
+		&:hover {
+			background-color: $color__dark_gray;
+		}
+	}
+}
+
+.margin-left-15 {
+	margin-left: 15px;
+}
+
+.margin-left-30 {
+	margin-left: 30px;
+}
+
+.gray-bg {
+	background-color: $color__graybg;
+}
+
+.white-bg {
+	background-color: $color__white;
+}
+
+.cursor-pointer {
+	cursor: pointer;
+}
+
+.no-margin {
+	margin: 0 !important;
+}

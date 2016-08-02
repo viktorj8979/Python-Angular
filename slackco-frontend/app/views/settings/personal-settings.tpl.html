@@ -1,0 +1,65 @@
+<div class="row">
+	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 left-content">		
+		<ul class="settings-sub-tabs">
+			<li ng-class="{'active': selSubTab=='personal-profile'}"><a ng-href="/#/settings?main=personal&sub=personal-profile">Profile</a></li>
+			<li ng-class="{'active': selSubTab=='personal-pwd'}"><a ng-href="/#/settings?main=personal&sub=personal-pwd">Password</a></li>
+		</ul>
+		<button class="btn btn-success" ng-click="updateSettings('personal')">Update Settings</button>	
+	</div>
+	<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+		<!-- Personal Setting -> Profile start -->
+		<div ng-show="selSubTab=='personal-profile'">
+			<form class="settings-form" name="$parent.profileForm">
+				<div class="row">
+					<div class="col-md-6 col-xs-12">				
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="First Name" ng-model="personalProfile.first_name" />
+						</div>				
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Role in The Company" ng-model="personalProfile.role" />
+						</div>
+						<div class="form-group">
+							<input type="email" class="form-control" placeholder="example@email.com" ng-model="personalProfile.email" />
+						</div>
+					</div>
+					<div class="col-md-6 col-xs-12">				
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Last Name" ng-model="personalProfile.last_name" />
+						</div>
+						<div class="form-group">
+							<div class="dropdown-wrapper">
+								<div class="dropdown-custom" ng-class="{'open': isDepartDropdownOpened}">
+									<div class="title" ng-click="toggleDepartDropdown()">{{personalProfile.department}}</div>
+									<div class="content" ng-nicescroll nice-option="{zindex: 999, autohidemode: true, cursorcolor: '#595959', cursorwidth: '7px', cursorborder: 'none', cursorborderradius: '7px'}">
+										<div ng-click="selectDepart(depart)" class="item" ng-repeat="depart in departList">{{depart.name}}</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</form>
+		</div>
+		<!-- Personal Setting -> Profile end -->
+
+		<!-- Personal Setting -> Password start -->
+		<div ng-show="selSubTab=='personal-pwd'">
+			<form class="settings-form" name="$parent.changePwdForm">
+				<h3 class="settings-title">Change your password</h3>
+				<div class="row">					
+					<div class="col-md-6 col-xs-12">
+						<div class="form-group">
+							<input type="password" class="form-control" placeholder="Old Password" ng-model="$parent.oldPwd" minlength="8" required />
+						</div>		
+					</div>
+					<div class="col-md-6 col-xs-12">		
+						<div class="form-group">
+							<input type="password" class="form-control" placeholder="New Password" ng-model="$parent.newPwd" minlength="8" required />
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+		<!-- Personal Setting -> Password end -->	
+	</div>
+</div>

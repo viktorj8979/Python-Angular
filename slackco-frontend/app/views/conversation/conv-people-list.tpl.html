@@ -1,0 +1,13 @@
+<div class="people-list-wrapper" ng-nicescroll nice-option="{zindex: 999, autohidemode: true, cursorcolor: '#595959', cursorwidth: '7px', cursorborder: 'none', cursorborderradius: '7px'}">
+	<ul class="conv-people-list">
+		<li ng-class="{selected: member.selected}" ng-click="toggleSelect($index)" ng-repeat="member in members">
+			<div class="user-info">
+				<img class="user-avatar" src="">
+				<div class="user-data">
+					<h3 class="user-name">{{member.email}}</h3>
+					<span class="user-level">{{member.role}}</span>
+				</div>
+			</div>
+		</li>
+	</ul>
+</div>

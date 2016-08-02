@@ -1,0 +1,167 @@
+.edit-friends-form {
+	padding: 0 !important;
+
+	.searchByIndustry {
+		margin: 50px 0;
+	}
+
+	.friend-list-wrapper {
+		height: 600px;
+	}
+
+	.friend-list {
+		li {
+			margin-bottom: 20px;
+			width: 100%;
+
+			.company-name {
+				color: $color__white;
+				font-family: "OpenSans";
+				font-size: 18px;
+			}
+
+			.company-info {
+				display: inline-block;
+			}
+
+			.actions {
+				line-height: 68px;	
+
+				.go-to-conv {
+					color: $color__white;
+				}
+
+				.close-icon {
+					float: none;
+				    display: inline-block;
+				    margin: 0 45px;
+				}
+			}
+		}
+	}
+}
+
+.create-conv-modal-header {
+	h4 {
+		font-size: 24px;
+	}
+
+	.close {
+		margin-top: 2px;
+	}
+}
+
+.create-conv-form {
+	padding: 30px 40px 24px !important;
+
+	label {
+		color: $color__gray;
+		margin-bottom: 5px !important;
+	}
+
+	.drag-drop-content {
+		padding: 50px 0;
+		text-align: center;
+		font-family: "OpenSans";
+		font-size: 18px;
+		text-align: center;
+		color: $color__white;
+		background-image: linear-gradient(108deg, $color__light_green, $color__dark_green);
+		@include border-radius(3px);
+		margin-bottom: 20px;
+	}
+
+	.uploaded-file-list {
+		margin-bottom: 40px;
+
+		li {
+			margin-bottom: 10px;
+			font-family: "OpenSans";
+			font-size: 12px;
+			color: $color__black;
+			position: relative;
+			width: 100%;
+			padding-left: 23px;
+
+			&:before {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 0;
+				background: url("../images/document-icon.png") no-repeat scroll 0 0 transparent;	
+				display: block;
+				width: 13px;
+				height: 17px;
+			}
+
+			.actions {
+				& > a {
+					display: inline-block;
+					float: none;
+				}
+
+				& > .loading-text {
+					font-family: "OpenSans-Semibold";
+					font-size: 12px;
+					color: $color__graybe;
+				}
+			}
+		}
+	}
+
+	.conv-subject {
+		@include border-radius(3px);
+	}
+
+	.conv-desc {
+		height: 200px;
+	}
+}
+
+.create-conv-modal-footer {
+	padding: 0;
+
+	button {
+		font-family: "OpenSans-Bold";
+		font-size: 14px;
+		padding: 25px 0;
+		@include border-radius(0);
+	}
+}
+
+.transparent-backdrop.modal-backdrop.in {
+	filter: alpha(opacity=90);
+	opacity: .9;
+}
+
+.transparent-modal {
+	.modal-content {
+		background-color: transparent;
+		box-shadow: none;
+		-moz-box-shadow: none;
+		-webkit-box-shadow: none;
+		border: none;
+		color: $color__white;
+	}
+
+	.modal-header {
+		padding: 0;
+		border: none;
+
+		.close-icon {
+			margin-top: 10px;
+		}
+	}
+
+	.modal-title {
+		font-family: "OpenSans-Light";
+		font-size: 22px;
+	}
+
+	@media (min-width: 768px) {
+		.modal-dialog {
+			width: 555px;
+			height: auto;
+		}
+	}
+}

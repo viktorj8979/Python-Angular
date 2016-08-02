@@ -1,0 +1,14 @@
+<div class="modal-header">
+	<span class="close-icon large-gray pull-right cursor-pointer" ng-click="cancel()" title="Close"></span>
+	<a ng-click="back()">Sign in to a different company</a>
+</div>
+<div class="modal-body">
+	<form name="registerForm">
+		<h3>Create a company</h3>
+		<div class="form-group">
+			<label>Enter your email address</label>
+			<input type="email" class="form-control" placeholder="youremail@example.com" ng-model="email" required />
+		</div>
+		<button class="btn btn-info btn-lg btn-block" ng-click="continue()">CONTINUE</button>
+	</form>	
+</div>

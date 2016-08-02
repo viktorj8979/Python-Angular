@@ -1,0 +1,188 @@
+/** customize button **/
+.btn {
+	padding: 14px 22px;	
+	font-family: "OpenSans-Semibold";
+	font-size: 16px;
+	@include border-radius(3px);
+	background-color: $color__gray52;
+	border-color: $color__gray52;
+	color: $color__white;
+
+	&.focus, &:focus, &:hover {
+		color: $color__white;	
+	}
+}
+.btn-lg {
+	padding: 23px 39px;
+	@include border-radius(5px);
+}
+.btn-sm {
+	padding: 4px 12px;
+    font-size: 14px;
+    font-family: OpenSans;	
+}
+.btn-info {
+	background-color: $color__blue;
+	border-color: $color__blue;	
+}
+.btn-success {
+	background-color: $color__green;
+	border-color: $color__green;
+}
+.btn.disabled,
+.btn[disabled],
+fieldset[disabled] .btn,
+.btn.disabled.focus, 
+.btn.disabled:focus, 
+.btn.disabled:hover, 
+.btn[disabled].focus, 
+.btn[disabled]:focus, 
+.btn[disabled]:hover, 
+fieldset[disabled] .btn.focus, 
+fieldset[disabled] .btn:focus, 
+fieldset[disabled] .btn:hover {
+	background-color: $color__grayda;
+	border-color: $color__grayda;
+}
+.btn-round {
+	@include border-radius(100px);
+}
+
+/** customize modal **/
+body.modal-open {
+	overflow-y: auto !important;
+	padding-right: 0 !important;
+}
+
+.modal-scrollbar-measure {
+	overflow: hidden;
+}
+.modal-content {
+	@include border-radius(5px);
+	height: 100%;
+}
+.modal-header {
+	padding: 34px 40px;
+	border-bottom: solid 1px $color__light_gray;
+}
+
+.modal-title {
+	font-family: OpenSans;
+  	font-size: 16px;  	
+}
+
+.modal-body {
+	padding: 0 0 30px 0px;
+}
+
+.modal-dialog {
+	a {
+		font-family: "OpenSans";
+		font-size: 16px;
+		color: $color__blue;
+		cursor: pointer;
+	}
+
+	form {
+		padding: 14px 40px 24px;
+
+		h3 {
+			font-family: "OpenSans-Bold";
+			font-size: 24px;
+			margin-bottom: 11px;
+		}
+
+		p {
+			font-family: "OpenSans-Light";
+			font-weight: lighter;
+			font-size: 20px;
+			margin-bottom: 30px;
+		}
+	}
+
+	.form-group {
+		margin-bottom: 30px;
+
+		label {
+			margin-bottom: 11px;
+		}
+	}
+
+	.modal-body .divider {
+		margin: 16px 0; 
+	}
+
+	@media (min-width: 768px) {
+		width: 555px;
+	    height: 700px;
+
+		.auto-height & {
+			height: auto;
+		}
+	}
+}
+
+/** customize form controls **/
+.form-control, .form-group label {
+	font-family: "OpenSans-Light";
+	font-weight: lighter;
+	font-size: 20px;
+	background-color: transparent;
+}
+
+input.form-control,
+select.form-control {
+	border-top: none;
+    border-left: none;
+    border-right: none;
+    box-shadow: none;
+    padding: 5.5px 0;
+    color: $color__black;
+}
+
+textarea.form-control {
+	resize: none;
+	@include border-radius(3px);
+	padding: 15px 20px;
+	font-family: "OpenSans";
+	font-size: 14px;
+	box-shadow: none;
+	color: $color__black;
+}
+
+label.control-label {
+	color: $color__gray;
+}
+
+.form-control {	
+	border-color: $color__border_gray;
+	@include border-radius(0);
+
+	&:focus {
+		border-color: $color__blue;
+		-box-shadow: none;
+		-webkit-box-shadow: none;	
+		-moz-box-shadow: none;	
+	}
+
+	&.link {
+		color: $color__blue;
+	}	
+}
+
+.input-sm {
+	font-size: 14px;
+	padding: 15px 20px !important;
+	height: auto;
+}
+
+/** navbar **/
+.navbar {
+	@media (min-width: 768px) {
+		& > .container .navbar-brand, 
+	    & > .container-fluid .navbar-brand {
+	    	margin: 0;
+	    	padding: 0;
+	    }
+	}
+}

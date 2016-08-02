@@ -1,0 +1,111 @@
+.navbar-custom {
+    margin-bottom: 0;        
+    position: absolute;
+ 	left: 0;
+ 	top: 0;
+ 	width: 100%;	
+ 	z-index: 99;
+ 	background-color: $color__dark_gray;
+
+	&.gray-bg {
+	 	position: relative !important;
+
+	 	@media (min-width: 768px) {
+	 		background-color: $color__dark_gray;
+	 	} 	
+	}
+
+	.navbar-brand {
+		font-family: OpenSans-Bold;
+	  	font-size: 30px;
+	  	color: $color__white;
+	    display: inline-block;
+	    line-height: 40px;
+	    height: 40px;
+	    padding: 8px 20px;
+	}
+
+	.navbar-toggle {
+		color: $color__white;
+	}
+
+	.navbar-nav > li {
+		margin-left: 60px;
+	}
+
+	.navbar-nav > li > a {
+		line-height: 40px;
+		padding: 0;
+		font-family: OpenSans-Semibold;
+		font-size: 16px;
+		color: $color__white;
+		cursor: pointer;
+	}
+
+	.navbar-nav > li .user-info .user-avatar {
+		width: 50px;
+		height: 50px;
+		margin-left: 15px;
+		margin-right: 0;
+	}
+
+	.navbar-nav > li .user-name,
+	.navbar-nav > li .user-role {
+		color: $color__white;
+	}
+
+	.nav > li > a:focus,
+	.nav > li > a:hover {
+		background-color: transparent;
+	}
+
+	.nav > li .dropdown-menu.dropdown-custom-menu {
+		margin-top: 10px;
+		background-color: $color__dark_blue;
+		padding: 0;
+		@include border-radius(3px);	  
+	}
+
+	@media (min-width: 768px) {
+		padding: 25px 0;
+        border-bottom: 0;
+        letter-spacing: 1px;
+        background: 0 0;
+
+        &.top-nav-collapse {
+	        padding: 0;        
+	        background: $color__black;
+	    }
+
+	    .navbar-nav > li > a.btn-signin {
+	    	margin-top: -5px;
+			width: 102px;
+		  	height: 50px;
+			@include border-radius(100px);
+		  	border: solid 1px $color__gray7c;
+		  	line-height: 50px;
+		  	text-align: center;
+	    }
+	}
+}
+
+.dropdown-menu.dropdown-custom-menu {	
+	& > li {
+		width: 180px;
+		height: 40px;
+		text-align: right;
+
+		& > a {
+			color: $color__white;
+			font-family: "OpenSans";
+			font-size: 14px;  
+			line-height: 40px;
+			padding: 0 30px;
+			cursor: pointer;
+
+			&:hover {
+				background-color: $color__blue;
+			}
+		}
+	}	
+}

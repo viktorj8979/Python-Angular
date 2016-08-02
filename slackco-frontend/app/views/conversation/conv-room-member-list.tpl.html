@@ -1,0 +1,8 @@
+<div class="people-list-wrapper" ng-nicescroll nice-option="{zindex: 999, autohidemode: true, cursorcolor: '#595959', cursorwidth: '7px', cursorborder: 'none', cursorborderradius: '7px'}">
+	<ul class="conv-people-list">
+		<span ng-repeat="member in currentRoom.members">
+			<label class="user-name">{{member.username }}</label>
+		</span>
+	</ul>
+	<a class="button" ng-click="gotoManage()">Manage +</a>
+</div>

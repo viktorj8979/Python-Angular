@@ -1,0 +1,50 @@
+<div class="conv-mng-page">
+	<div class="conv-select-container">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="user-info conv-user mng-section">
+						<img class="user-avatar" src="">
+						<div class="user-data">
+							<h3 class="user-name">Koen Bock started the conversation</h3>
+							<p class="user-level">CEO in <span class="company">FrameJS</span></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="mng-section">
+						<h3 class="title">CHOOSE COMPANY</h3>
+						<div ng-include="'views/conversation/choose-company-list.tpl.html'"></div>					
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="mng-section">
+						<h3 class="title">CLICK OR DRAG DEPARTMENT TO THE CONVERSATION</h3>
+						<div ng-include="'views/conversation/depart-list.tpl.html'"></div>
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="mng-section">
+						<h3 class="title">CLICK OR DRAG PEOPLE TO THE CONVERSATION</h3>
+						<div ng-include="'views/conversation/conv-people-list.tpl.html'"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="conv-members-container">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h2 class="conv-members-title">Conversation members</h2>
+					<div class="pull-right actions">
+						<button class="btn btn-success btn-round" ng-click="saveSettings()">Save Settings<span class="check white-icon icon"></span></button>
+						<button class="btn btn-round">Delete Conversation<span class="close-icon bold-white icon"></span></button>
+					</div>
+				</div>
+				<div class="col-md-12">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

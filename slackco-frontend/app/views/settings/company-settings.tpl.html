@@ -1,0 +1,201 @@
+<div class="row">
+	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 left-content">		
+		<ul class="settings-sub-tabs">
+			<li ng-class="{'active': selSubTab=='basic-info'}"><a ng-href="/#/settings?main=company&sub=basic-info">Basic Information</a></li>
+			<li ng-class="{'active': selSubTab=='socials'}"><a ng-href="/#/settings?main=company&sub=socials">Socials</a></li>
+			<li ng-class="{'active': selSubTab=='affiliate-companies'}"><a ng-href="/#/settings?main=company&sub=affiliate-companies">Affiliated Companies</a></li>
+		</ul>
+		<button class="btn btn-success" ng-click="updateSettings('company')">Update Settings</button>	
+	</div>
+	<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+
+		<!------ Settings / Company Settings / Basic Information ------>
+		<div ng-show="selSubTab=='basic-info'">
+			<form class="settings-form">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Name" ng-model="companyProfile.name" />
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="form-group">
+							<label class="control-label">Description</label>
+							<textarea class="form-control" placeholder="Typing company’s description" style="height: 200px;" ng-model="companyProfile.description"></textarea>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6 col-xs-12">				
+						<div class="form-group">
+							<input type="text" class="form-control link" placeholder="Website" ng-model="companyProfile.website" />
+						</div>				
+						<div class="form-group">
+							<div class="dropdown-wrapper">
+								<div class="dropdown-custom" ng-class="{'open': isComsizeDropdownOpened}">
+									<div class="title" ng-click="toggleSizeDropdown()" ng-class="{'has-data': companyProfile.company_size}">{{companyProfile.company_size || 'Company Size'}}</div>
+									<div class="content" ng-nicescroll nice-option="{zindex: 999, autohidemode: true, cursorcolor: '#595959', cursorwidth: '7px', cursorborder: 'none', cursorborderradius: '7px'}">
+										<div ng-click="selectSize(size)" class="item" ng-repeat="size in sizeList">{{size.name}}</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="dropdown-wrapper">
+								<div class="dropdown-custom" ng-class="{'open': isCountryDropdownOpened}">
+									<div class="title" ng-click="toggleCountryDropdown()" ng-class="{'has-data': companyProfile.country}">{{companyProfile.country || 'Country'}}</div>
+									<div class="content" ng-nicescroll nice-option="{zindex: 999, autohidemode: true, cursorcolor: '#595959', cursorwidth: '7px', cursorborder: 'none', cursorborderradius: '7px'}">
+										<div ng-click="selectCountry(country)" class="item" ng-repeat="country in countryList">{{country.name}}</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="City" ng-model="companyProfile.city" />
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Typing a owner’s name or an email" ng-model="companyProfile.owner.email" />
+						</div>
+					</div>
+					<div class="col-md-6 col-xs-12">				
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Type" ng-model="companyProfile.company_type" />
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Founded" ng-model="companyProfile.founded" />
+						</div>
+						<div class="form-group">
+							<div class="dropdown-wrapper">
+								<div class="dropdown-custom" ng-class="{'open': isStateDropdownOpened}">
+									<div class="title" ng-click="toggleStateDropdown()" ng-class="{'has-data': companyProfile.state}">{{companyProfile.state || 'State'}}</div>
+									<div class="content" ng-nicescroll nice-option="{zindex: 999, autohidemode: true, cursorcolor: '#595959', cursorwidth: '7px', cursorborder: 'none', cursorborderradius: '7px'}">
+										<div ng-click="selectState(state)" class="item" ng-repeat="state in stateList">{{state.name}}</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="dropdown-wrapper">
+								<div class="dropdown-custom" ng-class="{'open': isIndustryDropdownOpened}">
+									<div class="title" ng-click="toggleIndustryDropdown()" ng-class="{'has-data': companyProfile.industry}">{{companyProfile.industry || 'Industry'}}</div>
+									<div class="content" ng-nicescroll nice-option="{zindex: 999, autohidemode: true, cursorcolor: '#595959', cursorwidth: '7px', cursorborder: 'none', cursorborderradius: '7px'}">
+										<div ng-click="selectIndustry(industry)" class="item" ng-repeat="industry in industryList">{{industry.name}}</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</form>
+		</div>
+
+		<!------ Settings / Company Settings / Socials ------>
+		<div ng-show="selSubTab=='socials'">
+			<form class="settings-form" name="$parent.socialForm">
+				<h3 class="settings-title">Add company’s social accounts.</h3>
+				<div class="row">					
+					<div class="col-md-12">
+						<ul class="socials-settings">
+							<li id="facebook" click-outside="blurSocialURL('facebook')">
+								<span class="social-icon"><i class="fa fa-facebook"></i></span>
+								<input type="url" class="form-control" placeholder="Facebook" ng-model="socialURL.facebook" ng-focus="focusSocialURL('facebook')">
+								<div class="social-actions">
+									<a class="check cursor-pointer" ng-show="socialURLAction['facebook']=='update'" ng-click="saveSocialURL('facebook')"></a>
+									<a class="close-icon thin-gray cursor-pointer" ng-show="socialURLAction['facebook']=='update'" ng-click="cancelSocialURL('facebook')"></a>
+									<button class="btn btn-sm btn-success btn-save" ng-show="socialURLAction['facebook']=='create'" ng-click="saveSocialURL('facebook')">Save</button>
+								</div>
+							</li>
+							<li id="twitter" click-outside="blurSocialURL('twitter')">
+								<span class="social-icon"><i class="fa fa-twitter"></i></span>
+								<input type="url" class="form-control" placeholder="Twitter" ng-model="socialURL.twitter" ng-focus="focusSocialURL('twitter')" ng-blur="blurSocialURL('twitter')">
+								<div class="social-actions">
+									<a class="check cursor-pointer" ng-show="socialURLAction['twitter']=='update'" ng-click="saveSocialURL('twitter')"></a>
+									<a class="close-icon thin-gray cursor-pointer" ng-show="socialURLAction['twitter']=='update'" ng-click="cancelSocialURL('twitter')"></a>
+									<button class="btn btn-sm btn-success btn-save" ng-show="socialURLAction['twitter']=='create'" ng-click="saveSocialURL('twitter')">Save</button>
+								</div>
+							</li>
+							<li id="instagram" click-outside="blurSocialURL('instagram')">
+								<span class="social-icon"><i class="fa fa-instagram"></i></span>
+								<input type="url" class="form-control" placeholder="Instagram" ng-model="socialURL.instagram" ng-focus="focusSocialURL('instagram')" ng-blur="blurSocialURL('instagram')">
+								<div class="social-actions">
+									<a class="check cursor-pointer" ng-show="socialURLAction['instagram']=='update'" ng-click="saveSocialURL('instagram')"></a>
+									<a class="close-icon thin-gray cursor-pointer" ng-show="socialURLAction['instagram']=='update'" ng-click="cancelSocialURL('instagram')"></a>
+									<button class="btn btn-sm btn-success btn-save" ng-show="socialURLAction['instagram']=='create'" ng-click="saveSocialURL('instagram')">Save</button>
+								</div>
+							</li>
+							<li id="google_plus" click-outside="blurSocialURL('google_plus')">
+								<span class="social-icon"><i class="fa fa-google-plus"></i></span>
+								<input type="url" class="form-control" placeholder="Google+" ng-model="socialURL.google_plus" ng-focus="focusSocialURL('google_plus')" ng-blur="blurSocialURL('google_plus')">
+								<div class="social-actions">
+									<a class="check cursor-pointer" ng-show="socialURLAction['google_plus']=='update'" ng-click="saveSocialURL('google_plus')"></a>
+									<a class="close-icon thin-gray cursor-pointer" ng-show="socialURLAction['google_plus']=='update'" ng-click="cancelSocialURL('google_plus')"></a>
+									<button class="btn btn-sm btn-success btn-save" ng-show="socialURLAction['google_plus']=='create'" ng-click="saveSocialURL('google_plus')">Save</button>
+								</div>
+							</li>
+							<li id="linkedin" click-outside="blurSocialURL('linkedin')">
+								<span class="social-icon"><i class="fa fa-linkedin"></i></span>
+								<input type="url" class="form-control" placeholder="Linkedin" ng-model="socialURL.linkedin" ng-focus="focusSocialURL('linkedin')" ng-blur="blurSocialURL('linkedin')">
+								<div class="social-actions">
+									<a class="check cursor-pointer" ng-show="socialURLAction['linkedin']=='update'" ng-click="saveSocialURL('linkedin')"></a>
+									<a class="close-icon thin-gray cursor-pointer" ng-show="socialURLAction['linkedin']=='update'" ng-click="cancelSocialURL('linkedin')"></a>
+									<button class="btn btn-sm btn-success btn-save" ng-show="socialURLAction['linkedin']=='create'" ng-click="saveSocialURL('linkedin')">Save</button>
+								</div>
+							</li>
+							<li id="youtube" click-outside="blurSocialURL('youtube')">
+								<span class="social-icon"><i class="fa fa-youtube-play"></i></span>
+								<input type="url" class="form-control" placeholder="Youtube" ng-model="socialURL.youtube" ng-focus="focusSocialURL('youtube')" ng-blur="blurSocialURL('youtube')">
+								<div class="social-actions">
+									<a class="check cursor-pointer" ng-show="socialURLAction['youtube']=='update'" ng-click="saveSocialURL('youtube')"></a>
+									<a class="close-icon thin-gray cursor-pointer" ng-show="socialURLAction['youtube']=='update'" ng-click="cancelSocialURL('youtube')"></a>
+									<button class="btn btn-sm btn-success btn-save" ng-show="socialURLAction['youtube']=='create'" ng-click="saveSocialURL('youtube')">Save</button>
+								</div>
+							</li>
+							<li id="github" click-outside="blurSocialURL('github')">
+								<span class="social-icon"><i class="fa fa-github-alt"></i></span>
+								<input type="url" class="form-control" placeholder="Github" ng-model="socialURL.github" ng-focus="focusSocialURL('github')" ng-blur="blurSocialURL('github')">
+								<div class="social-actions">
+									<a class="check cursor-pointer" ng-show="socialURLAction['github']=='update'" ng-click="saveSocialURL('github')"></a>
+									<a class="close-icon thin-gray cursor-pointer" ng-show="socialURLAction['github']=='update'" ng-click="cancelSocialURL('github')"></a>
+									<button class="btn btn-sm btn-success btn-save" ng-show="socialURLAction['github']=='create'" ng-click="saveSocialURL('github')">Save</button>
+								</div>
+							</li>
+							<li id="stackoverflow" click-outside="blurSocialURL('stackoverflow')">
+								<span class="social-icon"><i class="fa fa-stack-overflow"></i></span>
+								<input type="url" class="form-control" placeholder="Stackoverflow" ng-model="socialURL.stackoverflow" ng-focus="focusSocialURL('stackoverflow')" ng-blur="blurSocialURL('stackoverflow')">
+								<div class="social-actions">
+									<a class="check cursor-pointer" ng-show="socialURLAction['stackoverflow']=='update'" ng-click="saveSocialURL('stackoverflow')"></a>
+									<a class="close-icon thin-gray cursor-pointer" ng-show="socialURLAction['stackoverflow']=='update'" ng-click="cancelSocialURL('stackoverflow')"></a>
+									<button class="btn btn-sm btn-success btn-save" ng-show="socialURLAction['stackoverflow']=='create'" ng-click="saveSocialURL('stackoverflow')">Save</button>
+								</div>
+							</li>											
+						</ul>
+					</div>		
+				</div>
+			</form>
+		</div>
+
+		<!------ Settings / Company Settings / Affliated Companies ------>
+		<div ng-show="selSubTab=='affiliate-companies'">
+			<form class="settings-form">
+				<h3 class="settings-title">Add affiliated companies that are registered on our platform</h3>
+				<div class="row">					
+					<div class="col-md-12">
+						<ul class="affi-list">
+							<li ng-if="company.id!=companyProfile.id" ng-repeat="company in companyList track by $index" ng-class="{'affiliated': isAffiliated(company)}">
+								<img class="company-icon" src="assets/images/twitter-icon-color.png">
+								<div class="company-name">{{company.name || company.owner.email}}</div>
+								<div class="actions">
+									<button class="btn btn-sm btn-success save">Save</button>
+									<a class="check cursor-pointer"></a>
+									<a class="close-icon thin-gray cursor-pointer delete"></a>
+								</div>
+							</li>	
+						</ul>
+					</div>		
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
